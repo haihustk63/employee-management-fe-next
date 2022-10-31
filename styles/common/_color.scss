@@ -1,0 +1,15 @@
+$basic_color: (
+  "blue": (
+    "basic_blue": #4756f7,
+  ),
+  "white": (
+    "basic_white": #ffffff,
+  ),
+  "black": (
+    "basic_black": #000000
+  )
+);
+
+@function getColor($color, $tone) {
+  @return map-get(map-get($basic_color, $color), $tone);
+}

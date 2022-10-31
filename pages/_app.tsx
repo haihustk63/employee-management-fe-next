@@ -1,10 +1,17 @@
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 
-import "../styles/globals.css";
+import "antd/dist/antd.css";
+import "@styles/index.scss";
+import "@styles/globals.css";
+import CommonLayout from "@components/Layout";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
+  return (
+    <CommonLayout>
+      <Component {...pageProps} />
+    </CommonLayout>
+  );
 };
 
 export default appWithTranslation(MyApp);

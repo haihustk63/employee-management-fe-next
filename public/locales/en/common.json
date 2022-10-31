@@ -1,5 +1,24 @@
 {
   "common": {
-    "txt_hello": "Hello"
+    "txt_apply_now": "Apply now",
+    "txt_our_solutions": "Our solutions"
+  },
+  "header": {
+    "txt_home": "Home",
+    "txt_recruitment": "Recruitment",
+    "txt_data_analytic_ai": "Data analytics and AI",
+    "txt_mobile_app_website": "Mobile apps and Website",
+    "txt_games": "Games",
+    "txt_about_us": "About us",
+    "txt_our_story": "Our story",
+    "txt_awards": "Our awards",
+    "txt_contact": "Contact us",
+    "txt_login": "Login"
+  },
+  "home": {
+    "banner": {
+      "txt_welcome": "Get your dream job today",
+      "txt_welcome_introduction": "Explore all the most exciting job roles based on your interest and study major"
+    }
   }
 }

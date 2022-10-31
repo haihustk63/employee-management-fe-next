@@ -1,0 +1,37 @@
+.home-banner {
+  display: flex;
+  align-items: center;
+  background-color: #f3f1ff;
+  padding: 2rem 8rem;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    &--large {
+      font-size: 4.8rem;
+    }
+
+    button {
+      margin-top: 2rem;
+    }
+  }
+
+  .ant-image {
+    flex: 1;
+    img {
+      height: 40rem;
+    }
+  }
+}
+
+.home-solutions {
+  padding: 3rem;
+  h1 {
+    text-align: center;
+  }
+  ul {
+    display: flex;
+  }
+}

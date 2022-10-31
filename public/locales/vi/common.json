@@ -1,6 +1,13 @@
 {
-    "common": {
-      "txt_hello": "Xin chao"
-    }
+  "header": {
+    "txt_home": "Trang chủ",
+    "txt_our_solutions": "Giải pháp của chúng tôi",
+    "txt_data_analytic_ai": "Phân tích dữ liệu và trí tuệ nhân tạo",
+    "txt_mobile_app_website": "Ứng dụng di động và website",
+    "txt_games": "Games",
+    "txt_about_us": "Về chúng tôi",
+    "txt_our_story": "Câu chuyện của chúng tôi",
+    "txt_awards": "Giải thưởng",
+    "txt_contact": "Liên hệ ngay"
   }
-  
+}

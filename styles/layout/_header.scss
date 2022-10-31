@@ -1,0 +1,33 @@
+.app-header {
+  background-color: getColor("white", "basic_white");
+  display: flex;
+  &__logo {
+    color: getColor("blue", "basic_blue");
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  &__category {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: 2rem;
+
+    li:first-child a {
+      color: getColor("black", "basic_black");
+    }
+  }
+
+  &__apply {
+    display: flex;
+    align-items: center;
+
+    button:first-child {
+        margin-right: 1rem;
+    }
+  }
+}
