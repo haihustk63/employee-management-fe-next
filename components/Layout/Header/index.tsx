@@ -15,17 +15,17 @@ const { Header } = Layout;
 const AppHeader = () => {
   const { t } = useTranslation();
 
-  const renderMenu = useCallback(
-    (menu: { key: number; label: string }[]) => {
-      const tMenu = menu.map((item) => ({
-        key: item.key,
-        label: t(item.label),
-      }));
+  // const renderMenu = useCallback(
+  //   (menu: { key: number; label: string }[]) => {
+  //     const tMenu = menu.map((item) => ({
+  //       key: item.key,
+  //       label: t(item.label),
+  //     }));
 
-      return <Menu items={tMenu} />;
-    },
-    [t]
-  );
+  //     return <Menu items={tMenu} />;
+  //   },
+  //   [t]
+  // );
 
   return (
     <Header className="app-header">
@@ -35,14 +35,7 @@ const AppHeader = () => {
         {HEADER_CATEGORY.map((item) => {
           return (
             <li key={item.title}>
-              {item.menu ? (
-                <AppDropDown menu={renderMenu(item.menu)}>
-                  <Text>{t(item.title)}</Text>
-                  {item.menu?.length && <DownOutlined />}
-                </AppDropDown>
-              ) : (
-                <Link href="#">{t(item.title)}</Link>
-              )}
+              <Link href="#">{t(item.title)}</Link>
             </li>
           );
         })}
@@ -51,6 +44,8 @@ const AppHeader = () => {
       <div className="app-header__apply">
         <AppButton buttonTitle={t("common.txt_apply_now")} onClick={() => {}} />
         <AppButton buttonTitle={t("header.txt_login")} onClick={() => {}} />
+        <AppButton buttonTitle={"Theme"} onClick={() => {}} />
+        <AppButton buttonTitle={"Language"} onClick={() => {}} />
       </div>
     </Header>
   );

@@ -1,13 +1,19 @@
 {
+  "common": {
+    "txt_apply_now": "Apply now",
+    "txt_about_us": "About us",
+    "txt_contact": "Contact us",
+    "txt_job": "Jobs",
+    "txt_news": "News"
+  },
   "header": {
-    "txt_home": "Trang chủ",
-    "txt_our_solutions": "Giải pháp của chúng tôi",
-    "txt_data_analytic_ai": "Phân tích dữ liệu và trí tuệ nhân tạo",
-    "txt_mobile_app_website": "Ứng dụng di động và website",
-    "txt_games": "Games",
-    "txt_about_us": "Về chúng tôi",
-    "txt_our_story": "Câu chuyện của chúng tôi",
-    "txt_awards": "Giải thưởng",
-    "txt_contact": "Liên hệ ngay"
+    "txt_home": "Home",
+    "txt_login": "Login"
+  },
+  "home": {
+    "banner": {
+      "txt_welcome": "Get your dream job today",
+      "txt_welcome_introduction": "Explore all the most exciting job roles based on your interest and study major"
+    }
   }
 }

@@ -4,11 +4,16 @@ import { FC } from "react";
 
 interface IAppButton {
   buttonTitle: string;
-  onClick: () => void;
+  onClick?: () => void;
+  htmlType?: "button" | "submit" | "reset" | undefined;
 }
 
-const AppButton: FC<IAppButton> = ({ buttonTitle, onClick }) => {
-  return <Button onClick={onClick}>{buttonTitle}</Button>;
+const AppButton: FC<IAppButton> = ({ buttonTitle, onClick, htmlType }) => {
+  return (
+    <Button onClick={onClick} htmlType={htmlType}>
+      {buttonTitle}
+    </Button>
+  );
 };
 
 export default AppButton;

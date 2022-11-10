@@ -1,19 +1,21 @@
 import ApplyNow from "./ApplyNow";
-import Awards from "./Awards";
+import LastestJobs from "./LastestJobs";
 import Banner from "./Banner";
-import CustomerReviews from "./CustomerReviews";
-import News from "./News";
-import Solutions from "./Solutions";
+import AboutUs from "./AboutUs";
+import Search from "./Search";
+import EmployeeReviews from "./EmployeeReviews";
 
 const HomePage = () => {
   return (
     <>
       <Banner />
-      <Solutions />
-      <Awards />
-      <CustomerReviews />
-      <ApplyNow />
-      <News />
+      <div className="home-page__wrap">
+        <Search />
+        <LastestJobs />
+        <AboutUs />
+        <EmployeeReviews />
+        <ApplyNow />
+      </div>
     </>
   );
 };

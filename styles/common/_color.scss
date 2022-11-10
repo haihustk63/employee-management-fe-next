@@ -6,8 +6,11 @@ $basic_color: (
     "basic_white": #ffffff,
   ),
   "black": (
-    "basic_black": #000000
-  )
+    "basic_black": #000000,
+  ),
+  "purple": (
+    "basic_purple": #696cff
+  ),
 );
 
 @function getColor($color, $tone) {

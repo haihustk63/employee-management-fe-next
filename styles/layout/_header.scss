@@ -17,7 +17,7 @@
     margin-right: auto;
     margin-left: 2rem;
 
-    li:first-child a {
+    li a:not(.ant-dropdown-trigger) {
       color: getColor("black", "basic_black");
     }
   }
@@ -27,7 +27,7 @@
     align-items: center;
 
     button:first-child {
-        margin-right: 1rem;
+      margin-right: 1rem;
     }
   }
 }

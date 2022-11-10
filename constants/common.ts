@@ -3,58 +3,21 @@ export const HEADER_CATEGORY = [
     title: "header.txt_home",
   },
   {
-    title: "header.txt_our_solutions",
-    menu: [
-      {
-        key: 1,
-        label: "header.txt_data_analytic_ai",
-      },
-      {
-        key: 2,
-        label: "header.txt_mobile_app_website",
-      },
-      {
-        key: 3,
-        label: "header.txt_games",
-      },
-    ],
+    title: "common.txt_job",
   },
   {
-    title: "header.txt_recruitment",
+    title: "common.txt_about_us",
   },
   {
-    title: "header.txt_about_us",
-    menu: [
-      {
-        key: 1,
-        label: "header.txt_our_story",
-      },
-      {
-        key: 2,
-        label: "header.txt_awards",
-      },
-    ],
+    title: "common.txt_news",
   },
   {
-    title: "header.txt_contact",
+    title: "common.txt_contact",
   },
 ];
 
-export const BANNER_SOLUTIONS = [
-  {
-    cardTitle: "Example 1",
-    content: "Card style type, can be set to inner or not set",
-  },
-  {
-    cardTitle: "Example 2",
-    content: "Card style type, can be set to inner or not set",
-  },
-  {
-    cardTitle: "Example 3",
-    content: "Card style type, can be set to inner or not set",
-  },
-  {
-    cardTitle: "Example 4",
-    content: "Card style type, can be set to inner or not set"
-  }
-];
+export const FORM_ITEM_TYPES = {
+  TEXT: "text",
+  TEXTAREA: "textarea",
+  SELECT: "select",
+};

@@ -1,0 +1,9 @@
+.apply-now-form {
+  box-shadow: $box_shadow_card;
+  background-color: getColor("white", "basic_white");
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 50rem;
+}

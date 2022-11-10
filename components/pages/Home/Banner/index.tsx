@@ -14,7 +14,7 @@ const Banner = () => {
         <Text>{t("home.banner.txt_welcome_introduction")}</Text>
         <AppButton buttonTitle={t("common.txt_apply_now")} onClick={() => {}} />
       </div>
-      <Image src="images/bg_home_banner.svg" alt="Banner Image" />
+      <Image src="images/bg_home_banner.svg" alt={t("home.banner.txt_alt_banner")} />
     </div>
   );
 };

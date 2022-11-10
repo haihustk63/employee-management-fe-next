@@ -1,24 +1,41 @@
 {
   "common": {
     "txt_apply_now": "Apply now",
-    "txt_our_solutions": "Our solutions"
+    "txt_about_us": "About us",
+    "txt_contact": "Contact us",
+    "txt_job": "Jobs",
+    "txt_news": "News",
+    "txt_search": "Search",
+    "txt_lastest_job": "Lastest jobs"
   },
   "header": {
     "txt_home": "Home",
-    "txt_recruitment": "Recruitment",
-    "txt_data_analytic_ai": "Data analytics and AI",
-    "txt_mobile_app_website": "Mobile apps and Website",
-    "txt_games": "Games",
-    "txt_about_us": "About us",
-    "txt_our_story": "Our story",
-    "txt_awards": "Our awards",
-    "txt_contact": "Contact us",
     "txt_login": "Login"
   },
   "home": {
     "banner": {
       "txt_welcome": "Get your dream job today",
-      "txt_welcome_introduction": "Explore all the most exciting job roles based on your interest and study major"
+      "txt_welcome_introduction": "Explore all the most exciting job roles based on your interest and study major",
+      "txt_alt_banner": "Home Banner"
+    },
+    "search": {
+      "txt_keyword_placeholder": "Enter keywords"
+    },
+    "job": {
+      "txt_explore_more": "Explore more jobs"
+    },
+    "about": {
+      "txt_our_story": "Our story",
+      "txt_our_story_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a malesuada leo, vel ornare erat. Suspendisse rutrum, enim eget gravida tincidunt, mi quam aliquam augue, et pharetra sem tortor eu odio. Quisque in ante mattis risus sagittis consequat. Mauris eleifend, ligula id laoreet pellentesque, leo velit pulvinar enim, vel luctus urna risus non magna. Mauris vestibulum bibendum lacinia. Cras semper auctor ipsum in fermentum. Integer sodales mattis risus. Curabitur ultrices lectus nec erat porta, ut mollis elit egestas. Nullam justo nibh, congue vel pretium at, feugiat sed lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi interdum tortor magna, eu aliquam magna euismod vel. Proin lacinia risus libero, vel laoreet ligula consectetur sit amet. Donec dignissim elementum lorem eget aliquam. Vivamus sit amet volutpat ante.",
+      "txt_our_mission": "Our mission",
+      "txt_our_mission_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a malesuada leo, vel ornare erat. Suspendisse rutrum, enim eget gravida tincidunt, mi quam aliquam augue, et pharetra sem tortor eu odio. Quisque in ante mattis risus sagittis consequat. Mauris eleifend, ligula id laoreet pellentesque, leo velit pulvinar enim, vel luctus urna risus non magna. Mauris vestibulum bibendum lacinia. Cras semper auctor ipsum in fermentum. Integer sodales mattis risus. Curabitur ultrices lectus nec erat porta, ut mollis elit egestas. Nullam justo nibh, congue vel pretium at, feugiat sed lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi interdum tortor magna, eu aliquam magna euismod vel. Proin lacinia risus libero, vel laoreet ligula consectetur sit amet. Donec dignissim elementum lorem eget aliquam. Vivamus sit amet volutpat ante.",
+      "txt_alt_banner": "About us banner"
     }
+  },
+  "apply": {
+    "txt_name_placeholder": "Enter your name",
+    "txt_phone_placeholder": "Enter your phone",
+    "txt_email_placeholder": "Enter your email",
+    "txt_cvlink_placeholder": "Paste your cv link here"
   }
 }

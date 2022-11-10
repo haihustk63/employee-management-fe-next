@@ -5,11 +5,13 @@ import "antd/dist/antd.css";
 import "@styles/index.scss";
 import "@styles/globals.css";
 import CommonLayout from "@components/Layout";
+import { BackTop } from "antd";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <CommonLayout>
       <Component {...pageProps} />
+      <BackTop />
     </CommonLayout>
   );
 };
