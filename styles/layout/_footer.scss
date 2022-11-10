@@ -1,0 +1,44 @@
+.app-footer {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact {
+    display: inherit;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: inherit;
+    justify-content: space-around;
+  }
+
+  &__branch {
+  }
+
+  &__category {
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__register-news-wrap {
+  }
+
+  &__register-news-form {
+    display: flex;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    background-color: getColor("purple", "basic_purple");
+    padding: 2rem;
+
+    .ant-typography {
+      color: getColor("white", "basic_white");
+    }
+  }
+}

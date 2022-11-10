@@ -1,11 +1,8 @@
-import { useCallback } from "react";
-import { Layout, Menu, Typography } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { Layout, Typography } from "antd";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 import { HEADER_CATEGORY } from "constants/common";
-import AppDropDown from "@components/AppDropdown";
 import AppButton from "@components/AppButton";
 
 const { Text } = Typography;
