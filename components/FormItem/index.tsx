@@ -15,7 +15,10 @@ const InputField = ({ field, form, ...props }: IFieldProps) => {
 };
 
 const SelectField = ({ field, form, ...props }: IFieldProps) => {
-  return <Select {...field} {...props} />;
+  const handleChange = (value: any) => {
+    form.setFieldValue(field.name, value);
+  };
+  return <Select {...field} {...props} onChange={handleChange} />;
 };
 
 const renderFormItemComponent = (type: any) => {

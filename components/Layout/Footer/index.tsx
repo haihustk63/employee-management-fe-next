@@ -55,12 +55,12 @@ const AppFooter = () => {
           </div>
         </div>
         <div className="app-footer__branch">
-          {branches.map(({ province, address }) => {
+          {branches.map(({ province, address }, index) => {
             return (
-              <>
+              <div key={index}>
                 <Title level={3}>{province}</Title>
                 <Text>{address}</Text>
-              </>
+              </div>
             );
           })}
         </div>

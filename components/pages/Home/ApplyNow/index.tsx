@@ -5,8 +5,9 @@ import ApplyNowForm from "@components/ApplyNowForm";
 const { Title, Text } = Typography;
 
 const ApplyNow = () => {
+
   return (
-    <div className="home-apply-now">
+    <div className="home-apply-now" id="home-apply-now">
       <div className="home-apply-now__content">
         <Title>We are waiting for you!</Title>
         <Text>

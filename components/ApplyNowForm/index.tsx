@@ -1,12 +1,14 @@
 import { Formik, Form } from "formik";
 import { Typography } from "antd";
-import { FC } from "react";
+import { FC, useRef } from "react";
+import { useContext } from "react";
 
 import FormItem from "@components/FormItem";
 
 import { FORM_ITEM_TYPES } from "constants/common";
 import { useTranslation } from "next-i18next";
 import AppButton from "@components/AppButton";
+import { PositionsContext } from "pages";
 
 const { TEXT, SELECT } = FORM_ITEM_TYPES;
 
@@ -17,15 +19,27 @@ const initialValues = {
   phone: "",
   email: "",
   cvLink: "",
-  positionId: "",
+  positionId: undefined,
 };
 
 const ApplyNowForm: FC = () => {
   const { t } = useTranslation();
 
-  const handleSubmit = () => {};
+  const { allPositions, submitApplyForm, handleToggleModal } = useContext(
+    PositionsContext
+  ) as any;
+
+  const handleSubmit = (data: any, { resetForm }: any) => {
+    submitApplyForm(data);
+    resetForm?.();
+    handleToggleModal();
+  };
+
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={handleSubmit}
+    >
       {({ values, errors, touched, handleSubmit, handleChange }) => {
         return (
           <Form onSubmit={handleSubmit} className="apply-now-form">
@@ -62,7 +76,8 @@ const ApplyNowForm: FC = () => {
               name="positionId"
               value={values.positionId}
               type={SELECT}
-              onChange={handleChange}
+              options={allPositions}
+              placeholder="Choose a position"
             />
             <AppButton
               buttonTitle={t("common.txt_apply_now")}

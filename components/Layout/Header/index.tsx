@@ -39,7 +39,9 @@ const AppHeader = () => {
       </ul>
 
       <div className="app-header__apply">
-        <AppButton buttonTitle={t("common.txt_apply_now")} onClick={() => {}} />
+        <Link href="#home-apply-now">
+          <AppButton buttonTitle={t("common.txt_apply_now")} />
+        </Link>
         <AppButton buttonTitle={t("header.txt_login")} onClick={() => {}} />
         <AppButton buttonTitle={"Theme"} onClick={() => {}} />
         <AppButton buttonTitle={"Language"} onClick={() => {}} />
