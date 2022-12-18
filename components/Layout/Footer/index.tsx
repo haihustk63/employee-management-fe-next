@@ -36,7 +36,7 @@ const AppFooter = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="app-footer">
+    <div className="app-footer" id="app-footer">
       <Footer className="app-footer__content">
         <div className="app-footer__contact">
           <Title>Logo</Title>

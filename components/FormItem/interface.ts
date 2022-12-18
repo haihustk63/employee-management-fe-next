@@ -2,11 +2,14 @@ import { FieldInputProps } from "formik";
 import { ReactNode } from "react";
 
 export interface IFormItemProps {
-  name: string;
+  name?: string;
+  label?: string;
+  mode?: "multiple" | "tags";
   placeholder?: string;
   value?: string;
   type?: string;
-  suffix?: ReactNode;
+  prefix?: ReactNode;
+  suffixIcon?: ReactNode;
   maxLength?: number;
   disabled?: boolean;
   allowClear?: boolean;
@@ -14,7 +17,7 @@ export interface IFormItemProps {
   onBlur?: any;
   onClear?: any;
   clearIcon?: ReactNode;
-  options?: { label: string; value: any }[];
+  options?: { key: string; label: string | number }[];
   defaultValue?: string | string[];
   popupClassName?: string;
   dropdownMatchSelectWidth?: boolean | number;
@@ -22,6 +25,20 @@ export interface IFormItemProps {
   loading?: boolean;
   onPopupScroll?: any;
   onSelect?: any;
+  ref?: any;
+  min?: number;
+  max?: number;
+  formatter?: (
+    value: number | string,
+    info: { userTyping: boolean; input: string }
+  ) => string;
+  precision?: number;
+  readOnly?: boolean;
+  step?: number;
+  onStep?: (
+    value: number,
+    info: { offset: number; type: "up" | "down" }
+  ) => void;
 }
 
 export interface IFieldProps {

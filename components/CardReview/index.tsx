@@ -11,14 +11,18 @@ const CardReview: FC<ICardReviewProps> = ({
   authorName,
   authorReview,
   authorPosition,
+  bgColor,
 }) => {
   return (
-    <div className="card-review">
-      <div className="card-review__image">
+    <div
+      className="card-review"
+      style={{ backgroundColor: `var(--color-primary-${bgColor})` }}
+    >
+      <div className="image">
         <Image src={imageUrl} alt={imageAlt} />
       </div>
 
-      <div className="card-review__content">
+      <div className="content">
         <Title>{authorName}</Title>
         <Title level={5}>{authorPosition}</Title>
         <Title level={4}>{authorReview}</Title>

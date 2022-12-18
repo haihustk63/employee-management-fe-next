@@ -1,0 +1,8 @@
+.app-tag {
+  > .ant-tag {
+    color: var(--color-primary-white);
+    padding: 0.2rem 1rem;
+    border-radius: var(--common-border-radius);
+    border: none;
+  }
+}

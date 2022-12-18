@@ -9,8 +9,8 @@ const Search = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="home-search">
-      <Title className="app-title">{t("common.txt_search")}</Title>
+    <div className="home-search" id="search-jobs">
+      <Title className="app-title">Search for jobs</Title>
       <FormSearch />
     </div>
   );

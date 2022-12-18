@@ -1,33 +1,67 @@
 .app-header {
-  background-color: getColor("white", "basic_white");
+  background-color: var(--color-faded-green);
   display: flex;
-  &__logo {
-    color: getColor("blue", "basic_blue");
-    margin-bottom: 0;
-    display: inline-block;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding: 2.8rem 7.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  .ant-image {
+    img {
+      width: auto;
+      height: 3rem;
+    }
   }
 
   &__category {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
     margin-bottom: 0;
     margin-right: auto;
     margin-left: 2rem;
+    height: 100%;
+    flex-grow: 1;
 
-    li a:not(.ant-dropdown-trigger) {
-      color: getColor("black", "basic_black");
+    li {
+      width: 12rem;
+      height: 100%;
+      cursor: pointer;
+
+      a {
+        height: 100%;
+        font-weight: 500;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+
+        &:hover {
+          opacity: 0.48;
+        }
+      }
     }
   }
 
   &__apply {
     display: flex;
+    gap: 1rem;
     align-items: center;
 
-    button:first-child {
-      margin-right: 1rem;
+    a:first-child > .app-button {
+      background-color: var(--color-primary-green);
+      color: var(--bs-white);
+      border-radius: var(--common-border-radius);
+    }
+
+    a:nth-child(2) > .app-button {
+      background-color: var(--color-primary-orange);
+      color: var(--bs-white);
+      border-radius: var(--common-border-radius);
     }
   }
 }

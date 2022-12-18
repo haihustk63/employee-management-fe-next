@@ -1,12 +1,13 @@
 import { Formik, Form } from "formik";
 import { Typography } from "antd";
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { useContext } from "react";
+import { useTranslation } from "next-i18next";
+import { object, string, number } from "yup";
 
 import FormItem from "@components/FormItem";
 
 import { FORM_ITEM_TYPES } from "constants/common";
-import { useTranslation } from "next-i18next";
 import AppButton from "@components/AppButton";
 import { PositionsContext } from "pages";
 
@@ -21,6 +22,13 @@ const initialValues = {
   cvLink: "",
   positionId: undefined,
 };
+
+const validateSchema = object({
+  name: string().required("Name is required"),
+  email: string().required("Email is required"),
+  cvLink: string().required("CV is required"),
+  positionId: number().required("Please choose a job"),
+});
 
 const ApplyNowForm: FC = () => {
   const { t } = useTranslation();
@@ -39,6 +47,7 @@ const ApplyNowForm: FC = () => {
     <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
+      validationSchema={validateSchema}
     >
       {({ values, errors, touched, handleSubmit, handleChange }) => {
         return (

@@ -1,0 +1,30 @@
+.form-item {
+  > .input {
+    padding: 0.5rem 3rem;
+    height: 5rem;
+    width: 100%;
+    border-radius: var(--common-border-radius);
+    border: none;
+  }
+
+  > .select {
+    height: 5rem;
+    width: 100%;
+  }
+
+  > .select > .ant-select-selector {
+    height: 100%;
+    padding: 0.5rem 3rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: var(--common-border-radius);
+    border: none;
+  }
+
+  > .form-field-error-message {
+    color: var(--color-primary-orange);
+    margin-top: 1rem;
+    display: block;
+  }
+}

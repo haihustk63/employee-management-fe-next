@@ -1,16 +1,26 @@
 import { Button } from "antd";
-import { useTranslation } from "next-i18next";
 import { FC } from "react";
 
-interface IAppButton {
-  buttonTitle: string;
-  onClick?: () => void;
-  htmlType?: "button" | "submit" | "reset" | undefined;
-}
+import { IAppButton } from "./interface";
 
-const AppButton: FC<IAppButton> = ({ buttonTitle, onClick, htmlType }) => {
+const AppButton: FC<IAppButton> = ({
+  buttonTitle,
+  onClick,
+  htmlType,
+  className,
+  size,
+  disabled,
+  id,
+}) => {
   return (
-    <Button onClick={onClick} htmlType={htmlType}>
+    <Button
+      onClick={onClick}
+      htmlType={htmlType}
+      className={`app-button ${className}`}
+      size={size}
+      disabled={disabled}
+      id={id}
+    >
       {buttonTitle}
     </Button>
   );

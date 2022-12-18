@@ -1,5 +1,5 @@
 .apply-now-form {
-  box-shadow: $box_shadow_card;
+  box-shadow: var(--common-box-shadow);
   background-color: getColor("white", "basic_white");
   padding: 2rem 3rem;
   display: flex;

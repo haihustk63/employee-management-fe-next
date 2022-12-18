@@ -1,19 +1,24 @@
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
+import "antd/dist/reset.css";
 
-import "antd/dist/antd.css";
 import "@styles/index.scss";
 import "@styles/globals.css";
 import CommonLayout from "@components/Layout";
 import { BackTop } from "antd";
+import AppFloatButton from "@components/AppFloatButton";
+import AppConfigWrapper from "context/app-config";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CommonLayout>
-      <Component {...pageProps} />
-      <BackTop />
-    </CommonLayout>
+    <AppConfigWrapper>
+      <CommonLayout>
+        <Component {...pageProps} />
+        <AppFloatButton description="Apply now" href="#home-apply-now" />
+        <BackTop />
+      </CommonLayout>
+    </AppConfigWrapper>
   );
-};
+}
 
 export default appWithTranslation(MyApp);

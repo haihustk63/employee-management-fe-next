@@ -4,4 +4,5 @@ export interface ICardReviewProps {
   authorName?: string;
   authorPosition?: string;
   authorReview?: string;
+  bgColor?: string;
 }

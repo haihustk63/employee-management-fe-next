@@ -3,19 +3,19 @@ import Link from "next/link";
 import { FC } from "react";
 
 interface IAppDropdown {
-  children: any;
+  children?: any;
   menu: any;
+  trigger?: ("click" | "hover" | "contextMenu")[];
 }
 
-const AppDropDown: FC<IAppDropdown> = ({ children, menu }) => {
+const AppDropDown: FC<IAppDropdown> = ({ children, menu, trigger }) => {
   const handleClick = (e: any) => {
     e.preventDefault();
   };
+
   return (
-    <Dropdown overlay={menu}>
-      <Link href="#" onClick={handleClick}>
-        {children}
-      </Link>
+    <Dropdown menu={menu} trigger={trigger}>
+      <div>{children}</div>
     </Dropdown>
   );
 };

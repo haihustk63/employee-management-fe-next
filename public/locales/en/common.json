@@ -6,7 +6,9 @@
     "txt_job": "Jobs",
     "txt_news": "News",
     "txt_search": "Search",
-    "txt_lastest_job": "Lastest jobs"
+    "txt_lastest_job": "Lastest jobs",
+    "txt_compensation": "Compensation",
+    "txt_faq": "FAQ"
   },
   "header": {
     "txt_home": "Home",
@@ -22,7 +24,7 @@
       "txt_keyword_placeholder": "Enter keywords"
     },
     "job": {
-      "txt_explore_more": "Explore more jobs"
+      "txt_explore_more": "Explore jobs"
     },
     "about": {
       "txt_our_story": "Our story",

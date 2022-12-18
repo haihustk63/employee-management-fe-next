@@ -1,7 +1,11 @@
 import { FC } from "react";
 import { Carousel } from "antd";
+import { Typography } from "antd";
 
 import CardReview from "@components/CardReview";
+import { useAnimated } from "hooks";
+
+const { Text } = Typography;
 
 const listReviews = [
   {
@@ -11,6 +15,7 @@ const listReviews = [
     authorPosition: "Example",
     authorReview:
       "Discover new illustrations every week. Use them on your landing pages, blog posts, newsletters, social media graphics and more!",
+    bgColor: "green",
   },
   {
     imageUrl: "/images/example_profile.svg",
@@ -19,6 +24,7 @@ const listReviews = [
     authorPosition: "Example",
     authorReview:
       "Discover new illustrations every week. Use them on your landing pages, blog posts, newsletters, social media graphics and more!",
+    bgColor: "green",
   },
   {
     imageUrl: "/images/example_profile.svg",
@@ -27,6 +33,7 @@ const listReviews = [
     authorPosition: "Example",
     authorReview:
       "Discover new illustrations every week. Use them on your landing pages, blog posts, newsletters, social media graphics and more!",
+    bgColor: "green",
   },
   {
     imageUrl: "/images/example_profile.svg",
@@ -35,13 +42,15 @@ const listReviews = [
     authorPosition: "Example",
     authorReview:
       "Discover new illustrations every week. Use them on your landing pages, blog posts, newsletters, social media graphics and more!",
+    bgColor: "green",
   },
 ];
 
 const EmployeeReviews: FC = () => {
   return (
     <div className="home-employee-review">
-      <Carousel className="home-employee-review__list" autoplay>
+      <Text className="title">Our employees say about us</Text>
+      <Carousel className="list" autoplay>
         {listReviews.map((review) => {
           return <CardReview key={Math.random().toString()} {...review} />;
         })}

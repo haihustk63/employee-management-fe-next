@@ -2,11 +2,18 @@ import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { createContext, useState } from "react";
 
-import { withServerSideProps } from "hoc/withServerSideProps";
-import HomePage from "@components/pages/Home";
-import { positionService } from "services/position";
-import { candidateService } from "services/candidate";
 import AppModal from "@components/AppModal";
+import AboutUs from "@components/pages/Home/AboutUs";
+import ApplyNow from "@components/pages/Home/ApplyNow";
+import Banner from "@components/pages/Home/Banner";
+import EmployeeReviews from "@components/pages/Home/EmployeeReviews";
+import LastestJobs from "@components/pages/Home/LastestJobs";
+import Search from "@components/pages/Home/Search";
+import { withServerSideProps } from "hoc/withServerSideProps";
+import { candidateService } from "services/candidate";
+import { positionService } from "services/position";
+import Compensation from "@components/pages/Home/Compensation";
+import FrequentlyAskedQuestion from "@components/pages/Home/FAQ";
 
 export const PositionsContext = createContext({});
 
@@ -32,7 +39,16 @@ export default function Home({ allPositions }: any) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <HomePage />
+        <Banner />
+        <div className="home-page__wrap">
+          <Search />
+          <LastestJobs />
+          <AboutUs />
+          <EmployeeReviews />
+          <Compensation />
+          <FrequentlyAskedQuestion />
+          <ApplyNow />
+        </div>
         <AppModal
           title="Example modal"
           open={visibleModal}

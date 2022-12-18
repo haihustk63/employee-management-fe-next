@@ -1,13 +1,20 @@
 import { Typography } from "antd";
 
 import ApplyNowForm from "@components/ApplyNowForm";
+import { useAnimated } from "hooks";
 
 const { Title, Text } = Typography;
 
 const ApplyNow = () => {
+  const { ref, animated } = useAnimated();
 
   return (
-    <div className="home-apply-now" id="home-apply-now">
+    <div
+      className="home-apply-now"
+      id="home-apply-now"
+      ref={ref}
+      style={{ animation: animated ? "fadeToClear ease-in 1s" : undefined }}
+    >
       <div className="home-apply-now__content">
         <Title>We are waiting for you!</Title>
         <Text>
