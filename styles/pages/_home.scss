@@ -68,37 +68,7 @@
   opacity: 0.2;
 }
 
-.home-search {
-  box-shadow: var(--common-box-shadow);
-  border-radius: var(--common-border-radius);
-  padding: 3rem;
-  background-color: var(--color-primary-green-o);
-  // background: linear-gradient(
-  //   120deg,
-  //   var(--color-primary-orange-o) 30%,
-  //   var(--color-primary-green-o) 30%,
-  //   var(--color-primary-green-o) 70%,
-  //   var(--color-primary-orange-o) 70%
-  // );
-
-  > .home-form-search {
-    display: flex;
-    gap: 1rem;
-  }
-
-  > .home-form-search > .form-item {
-    flex-grow: 1;
-  }
-  > .home-form-search > .app-button {
-    height: 5rem;
-    width: 16rem;
-  }
-
-  margin-bottom: 2rem;
-}
-
 .home-lastest-jobs {
-  margin-top: 12rem;
   display: flex;
   padding: 3rem;
 
@@ -134,13 +104,22 @@
     align-items: stretch;
     height: 100%;
 
-    > * {
-      flex: 0 0 calc((100% - 3.2rem) / 2);
+    > .job-card,
+    > .link {
+      width: calc((100% - 3.2rem) / 2);
       margin: 0.8rem;
+    }
+
+    > .link > .explores {
+      height: 100%;
+    }
+
+    > .app-card:hover {
+      animation: rotateCard ease-in 1s infinite;
     }
   }
 
-  > .list > .explores > .ant-space {
+  > .list > .link > .explores > .ant-space {
     border-radius: 1rem;
     padding: 1.5rem;
     cursor: pointer;
@@ -153,20 +132,26 @@
     }
   }
 
-  > .list .cardtitle {
-    display: flex;
-    align-items: center;
-  }
+  // > .list .cardtitle {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   width: 100%;
+  // }
 
-  > .list .cardtitle > .jobtitle {
-    font-size: 2.4rem;
-    margin: 0 auto 0 1rem;
-  }
+  // > .list .cardtitle > .name > .jobtitle {
+  //   font-size: 2.4rem;
+  //   margin: 0 auto 0 1rem;
+  //   display: block;
+  //   white-space: nowrap;
+  //   text-overflow: ellipsis;
+  //   overflow: hidden;
+  // }
 
-  > .list .cardtitle > .upto {
-    text-transform: uppercase;
-    color: var(--color-primary-orange);
-  }
+  // > .list .cardtitle > .upto {
+  //   text-transform: uppercase;
+  //   color: var(--color-primary-orange);
+  // }
 }
 
 .home-about-us {
@@ -306,4 +291,24 @@
 
 .apply-now-form > .app-button {
   background-color: var(--color-primary-orange);
+}
+
+// compensation
+.home-compensation {
+  display: flex;
+  gap: 2rem;
+  margin-top: 12rem;
+
+  > .compensation-item {
+    flex-basis: calc((100% - 8rem) / 5);
+    height: 36rem;
+  }
+
+  > .compensation-item:nth-child(even) {
+    background-color: var(--color-primary-orange);
+  }
+
+  > .compensation-item:nth-child(odd) {
+    background-color: var(--color-primary-green);
+  }
 }

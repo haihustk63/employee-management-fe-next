@@ -25,7 +25,7 @@ const CardReview: FC<ICardReviewProps> = ({
       <div className="content">
         <Title>{authorName}</Title>
         <Title level={5}>{authorPosition}</Title>
-        <Title level={4}>{authorReview}</Title>
+        <Title level={4}>&ldquo;{authorReview}&rdquo;</Title>
       </div>
     </div>
   );

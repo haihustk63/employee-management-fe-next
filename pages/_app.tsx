@@ -8,6 +8,10 @@ import CommonLayout from "@components/Layout";
 import { BackTop } from "antd";
 import AppFloatButton from "@components/AppFloatButton";
 import AppConfigWrapper from "context/app-config";
+import { GetServerSideProps } from "next";
+import { withServerSideProps } from "hoc/withServerSideProps";
+import { positionService } from "services/position";
+import { jobService } from "services/jobs";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

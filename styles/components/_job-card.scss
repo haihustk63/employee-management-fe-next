@@ -1,0 +1,21 @@
+.job-card {
+  .cardtitle > .name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .cardtitle > .name > .jobtitle {
+    font-size: 2.4rem;
+    margin: 0 auto 0 1rem;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .cardtitle > .upto {
+    text-transform: uppercase;
+    color: var(--color-primary-orange);
+  }
+}

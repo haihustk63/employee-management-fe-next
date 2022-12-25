@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const api = {
-  get: async (url: string) => {
-    const response = await axios.get(url);
+  get: async (url: string, params?: any) => {
+    const response = await axios.get(url, { params });
     return response.data;
   },
 

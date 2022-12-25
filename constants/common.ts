@@ -61,36 +61,101 @@ export const LANGUAGE_SUPPORT: MenuProps["items"] = [
   },
 ];
 
-export const JOB_TYPES = [
+export const COMPENSATION_ITEMS = [
   {
-    key: "parttime",
-    label: "Parttime",
+    key: 1,
+    title: "Probationary period with 100% salary",
+    content: "You can rereive 100% salary in probationary period",
   },
   {
-    key: "fulltime",
-    label: "Fulltime",
+    key: 2,
+    title: "Promotion chances",
+    content: "You can rereive 100% salary in probationary period",
+  },
+  {
+    key: 3,
+    title: "Experience with many positions",
+    content: "You can rereive 100% salary in probationary period",
+  },
+  {
+    key: 4,
+    title: "Full salary's insurance",
+    content: "You can rereive 100% salary in probationary period",
+  },
+  {
+    key: 5,
+    title: "Traveling, team-building",
+    content: "You can rereive 100% salary in probationary period",
   },
 ];
 
-export const JOB_LEVELS = [
+export const HIRING_FLOW_ITEMS = [
   {
-    key: "intern",
+    key: 1,
+    title: "Apply CV",
+  },
+  {
+    key: 2,
+    title: "Attempt the skill test",
+  },
+  {
+    key: 3,
+    title: "Online Interview",
+  },
+  {
+    key: 4,
+    title: "Offline Interview",
+  },
+  {
+    key: 5,
+    title: "Notify result",
+  },
+];
+
+export const JOB_TYPES: { [key: string]: string | number }[] = [
+  {
+    key: 0,
+    label: "Parttime",
+    value: 0,
+    color: "orange",
+  },
+  {
+    key: 1,
+    label: "Fulltime",
+    value: 1,
+    color: "green",
+  },
+];
+
+export const JOB_LEVELS: { [key: string]: string | number }[] = [
+  {
+    key: 0,
+    value: 0,
     label: "Intern",
+    color: "grey",
   },
   {
-    key: "fresher",
+    key: 1,
+    value: 1,
     label: "Fresher",
+    color: "green",
   },
   {
-    key: "junior",
+    key: 2,
+    value: 2,
     label: "Junior",
+    color: "blue",
   },
   {
-    key: "middle",
+    key: 3,
+    value: 3,
     label: "Middle",
+    color: "orange",
   },
   {
-    key: "senior",
+    key: 4,
+    value: 4,
     label: "Senior",
+    color: "red",
   },
 ];

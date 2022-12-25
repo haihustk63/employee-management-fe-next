@@ -12,6 +12,12 @@ body {
   --color-primary-orange-o: rgb(242, 119, 42, 0.2);
   --color-primary-black: #000;
   --color-primary-white: #fff;
+  --color-primary-red: #c70c00;
+  --color-secondary-red: #f7dbda;
+  --color-primary-blue: #1e5ac7;
+  --color-secondary-blue: #d9e1f7;
+  --color-primary-grey: #8c8f8c;
+  --color-secondary-grey: #e6e6e6;
 
   --common-border-radius: 1rem;
   --common-box-shadow: 0 2px 6px 0 rgb(67 89 113 / 12%);

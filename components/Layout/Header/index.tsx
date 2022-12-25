@@ -92,11 +92,14 @@ const AppHeader = () => {
 
   return (
     <Header className="app-header">
-      <Image
-        className="app-header__logo"
-        src="/images/app_logo.png"
-        alt="App Logo"
-      />
+      <Link href="/">
+        <Image
+          className="app-header__logo"
+          src="/images/app_logo.png"
+          alt="App Logo"
+          preview={false}
+        />
+      </Link>
 
       <ul className="app-header__category">
         {HEADER_CATEGORY.map((item) => {

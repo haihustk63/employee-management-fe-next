@@ -8,20 +8,20 @@ import ApplyNow from "@components/pages/Home/ApplyNow";
 import Banner from "@components/pages/Home/Banner";
 import EmployeeReviews from "@components/pages/Home/EmployeeReviews";
 import LastestJobs from "@components/pages/Home/LastestJobs";
-import Search from "@components/pages/Home/Search";
 import { withServerSideProps } from "hoc/withServerSideProps";
 import { candidateService } from "services/candidate";
 import { positionService } from "services/position";
 import Compensation from "@components/pages/Home/Compensation";
 import FrequentlyAskedQuestion from "@components/pages/Home/FAQ";
+import { jobService } from "services/jobs";
 
-export const PositionsContext = createContext({});
+export const HomeContext = createContext({});
 
 const submitApplyForm = async (data: any) => {
   await candidateService.postApplyForm(data);
 };
 
-export default function Home({ allPositions }: any) {
+export default function Home({ allPositions, jobList, jobListFull }: any) {
   const [visibleModal, setVisibleModal] = useState(false);
 
   const handleToggleModal = () => {
@@ -29,8 +29,14 @@ export default function Home({ allPositions }: any) {
   };
 
   return (
-    <PositionsContext.Provider
-      value={{ allPositions, submitApplyForm, handleToggleModal }}
+    <HomeContext.Provider
+      value={{
+        allPositions,
+        jobList,
+        jobListFull,
+        submitApplyForm,
+        handleToggleModal,
+      }}
     >
       <div className="homepage">
         <Head>
@@ -41,7 +47,6 @@ export default function Home({ allPositions }: any) {
 
         <Banner />
         <div className="home-page__wrap">
-          <Search />
           <LastestJobs />
           <AboutUs />
           <EmployeeReviews />
@@ -58,19 +63,34 @@ export default function Home({ allPositions }: any) {
           <h1>Bạn đã gửi thông tin thành công!</h1>
         </AppModal>
       </div>
-    </PositionsContext.Provider>
+    </HomeContext.Provider>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = withServerSideProps(
   async () => {
-    const result = await positionService.getAllPositions();
-    const allPositions = result?.allPositions.map((item: any) => ({
-      label: item?.name,
-      value: item?.id,
-      key: item?.id,
-      description: item?.description,
-    }));
-    return { allPositions };
+    try {
+      const positionResult = await positionService.getAllPositions();
+      const allPositions = positionResult?.allPositions.map((item: any) => ({
+        label: item?.name,
+        value: item?.id,
+        key: item?.id,
+        description: item?.description,
+      }));
+      const jobResult = await jobService.getAllJobs();
+      const jobList = jobResult?.allJobs.filter(
+        (item: any, index: number) => index <= 4
+      );
+      const jobListFull = jobResult?.allJobs.map(
+        (item: any, index: number) => ({
+          label: item?.title,
+          value: item?.id,
+          key: item?.id,
+        })
+      );
+      return { allPositions, jobList, jobListFull };
+    } catch (err) {
+      console.error(err);
+    }
   }
 );

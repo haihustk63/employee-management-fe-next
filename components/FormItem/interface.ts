@@ -13,6 +13,7 @@ export interface IFormItemProps {
   maxLength?: number;
   disabled?: boolean;
   allowClear?: boolean;
+  showSearch?: boolean;
   onChange?: any;
   onBlur?: any;
   onClear?: any;
@@ -39,6 +40,7 @@ export interface IFormItemProps {
     value: number,
     info: { offset: number; type: "up" | "down" }
   ) => void;
+  onPressEnter?: any;
 }
 
 export interface IFieldProps {

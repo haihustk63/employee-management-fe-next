@@ -9,7 +9,7 @@ import FormItem from "@components/FormItem";
 
 import { FORM_ITEM_TYPES } from "constants/common";
 import AppButton from "@components/AppButton";
-import { PositionsContext } from "pages";
+import { HomeContext } from "pages";
 
 const { TEXT, SELECT } = FORM_ITEM_TYPES;
 
@@ -20,21 +20,21 @@ const initialValues = {
   phone: "",
   email: "",
   cvLink: "",
-  positionId: undefined,
+  jobId: undefined,
 };
 
 const validateSchema = object({
   name: string().required("Name is required"),
   email: string().required("Email is required"),
   cvLink: string().required("CV is required"),
-  positionId: number().required("Please choose a job"),
+  jobId: number().required("Please choose a job"),
 });
 
 const ApplyNowForm: FC = () => {
   const { t } = useTranslation();
 
-  const { allPositions, submitApplyForm, handleToggleModal } = useContext(
-    PositionsContext
+  const { jobListFull, submitApplyForm, handleToggleModal } = useContext(
+    HomeContext
   ) as any;
 
   const handleSubmit = (data: any, { resetForm }: any) => {
@@ -82,11 +82,13 @@ const ApplyNowForm: FC = () => {
               placeholder={t("apply.txt_cvlink_placeholder")}
             />
             <FormItem
-              name="positionId"
-              value={values.positionId}
+              name="jobId"
+              value={values.jobId}
               type={SELECT}
-              options={allPositions}
-              placeholder="Choose a position"
+              options={jobListFull}
+              placeholder="Choose a job"
+              showSearch
+              
             />
             <AppButton
               buttonTitle={t("common.txt_apply_now")}

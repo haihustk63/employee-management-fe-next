@@ -49,7 +49,6 @@ const listReviews = [
 const EmployeeReviews: FC = () => {
   return (
     <div className="home-employee-review">
-      <Text className="title">Our employees say about us</Text>
       <Carousel className="list" autoplay>
         {listReviews.map((review) => {
           return <CardReview key={Math.random().toString()} {...review} />;

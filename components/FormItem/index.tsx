@@ -24,6 +24,9 @@ const SelectField = ({ field, form, ...props }: IFieldProps) => {
 
   const { onChange: handleChangeProp } = props as any;
 
+  const filterOption = (input: string, option: any) =>
+    (option?.label ?? "").toLowerCase().includes(input.toLowerCase());
+
   return (
     <Select
       {...field}
@@ -31,6 +34,8 @@ const SelectField = ({ field, form, ...props }: IFieldProps) => {
       allowClear
       onChange={handleChangeProp || handleChange}
       className="select"
+      filterOption={filterOption}
+      optionFilterProp="label"
     />
   );
 };

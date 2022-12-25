@@ -1,65 +1,19 @@
-import AppCard from "@components/AppCard";
-import AppTag from "@components/AppTag";
-import ClockIcon from "@public/icons/ClockIcon";
-import ExploreIcon from "@public/icons/ExploreIcon";
-import HotJarIcon from "@public/icons/HotJarIcon";
-import { Image, Space, Typography } from "antd";
-import { useAnimated } from "hooks";
 import { useTranslation } from "next-i18next";
+import { Image, Space, Typography } from "antd";
+import Link from "next/link";
 
-const { Title, Text } = Typography;
+import ExploreIcon from "@public/icons/ExploreIcon";
+import { useAnimated } from "hooks";
+import JobCard from "./JobCard/index";
+import { FC, useContext } from "react";
+import { HomeContext } from "pages";
 
-const exampleCard = [
-  {
-    id: 1,
-    jobTitle: "Example",
-    jobType: "Full-Time",
-    jobLevel: "Middle",
-    branch: "Da Nang",
-  },
-  {
-    id: 2,
-    jobTitle: "Example",
-    jobType: "Full-Time",
-    jobLevel: "Middle",
-    branch: "Da Nang",
-  },
-  {
-    id: 3,
-    jobTitle: "Example",
-    jobType: "Full-Time",
-    jobLevel: "Middle",
-    branch: "Da Nang",
-  },
-  {
-    id: 4,
-    jobTitle: "Example",
-    jobType: "Full-Time",
-    jobLevel: "Middle",
-    branch: "Da Nang",
-  },
-  {
-    id: 5,
-    jobTitle: "Example",
-    jobType: "Full-Time",
-    jobLevel: "Middle",
-    branch: "Da Nang",
-  },
-];
+const { Title } = Typography;
 
-const LastestJobs = () => {
+const LastestJobs: FC = () => {
   const { t } = useTranslation();
+  const { jobList = [] } = useContext(HomeContext) as any;
   const { ref, animated } = useAnimated();
-
-  const renderCardTitle = (jobTitle: string) => {
-    return (
-      <div className="cardtitle">
-        <HotJarIcon color="orange" />
-        <Text className="jobtitle">{jobTitle}</Text>
-        <Text className="upto">Up to: 3000$</Text>
-      </div>
-    );
-  };
 
   return (
     <div
@@ -77,26 +31,21 @@ const LastestJobs = () => {
         />
       </div>
       <ul className="list">
-        {exampleCard.map(({ id, jobTitle, jobType, jobLevel }) => {
-          return (
-            <AppCard key={id} cardTitle={renderCardTitle(jobTitle)} hoverable>
-              <Space size={[0, 0]}>
-                <AppTag color="green">{jobType}</AppTag>
-                <AppTag color="orange">{jobLevel}</AppTag>
-              </Space>
-            </AppCard>
-          );
+        {jobList.map((jobItem: any) => {
+          return <JobCard key={jobItem.id} jobItem={jobItem} />;
         })}
-        <div className="explores">
-          <Space direction="vertical">
-            <Title>{t("home.job.txt_explore_more")}</Title>
-            <Space>
-              <ExploreIcon color="green" />
-              <ExploreIcon color="green" />
-              <ExploreIcon color="green" />
+        <Link className="link" href="/jobs">
+          <div className="explores">
+            <Space direction="vertical">
+              <Title>{t("home.job.txt_explore_more")}</Title>
+              <Space>
+                <ExploreIcon color="green" />
+                <ExploreIcon color="green" />
+                <ExploreIcon color="green" />
+              </Space>
             </Space>
-          </Space>
-        </div>
+          </div>
+        </Link>
       </ul>
     </div>
   );
