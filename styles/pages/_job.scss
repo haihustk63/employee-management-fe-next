@@ -4,11 +4,19 @@
   > .job-list {
     display: flex;
     flex-wrap: wrap;
+    @include lg {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   > .job-list > .link {
     width: calc((100% - 4.8rem) / 3);
     margin: 0.8rem;
+    @include lg {
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 
@@ -21,6 +29,11 @@
   > .job-form-search {
     display: flex;
     gap: 1rem;
+
+    @include lg {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   > .job-form-search > .form-item:first-child {
@@ -29,11 +42,17 @@
 
   > .job-form-search > .form-item:not(first-child) {
     width: 18%;
+    @include lg {
+      width: 100%;
+    }
   }
 
   > .job-form-search > .app-button {
     height: 5rem;
     width: 16rem;
+    @include lg {
+      width: 100%;
+    }
   }
 
   margin-bottom: 2rem;

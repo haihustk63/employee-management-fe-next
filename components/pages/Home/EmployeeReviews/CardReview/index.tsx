@@ -16,10 +16,10 @@ const CardReview: FC<ICardReviewProps> = ({
   return (
     <div
       className="card-review"
-      style={{ backgroundColor: `var(--color-primary-${bgColor})` }}
+      style={{ backgroundColor: `var(--color-secondary-${bgColor})` }}
     >
       <div className="image">
-        <Image src={imageUrl} alt={imageAlt} />
+        <Image src={imageUrl} alt={imageAlt} preview={false} />
       </div>
 
       <div className="content">

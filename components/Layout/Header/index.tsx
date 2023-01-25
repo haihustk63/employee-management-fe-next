@@ -1,4 +1,4 @@
-import { Dropdown, Layout, MenuProps, Typography } from "antd";
+import { Dropdown, Layout, Menu, MenuProps, Space, Typography } from "antd";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { Image } from "antd";
@@ -15,57 +15,14 @@ import DarkThemeIcon from "@public/icons/DarkThemeIcon";
 import LightThemeIcon from "@public/icons/LightThemeIcon";
 import AppDropDown from "@components/AppDropdown";
 import LanguageIcon from "@public/icons/LanguageIcon";
-
-const items: MenuProps["items"] = [
-  {
-    key: "1",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.antgroup.com"
-      >
-        1st menu item
-      </a>
-    ),
-  },
-  {
-    key: "2",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.aliyun.com"
-      >
-        2nd menu item (disabled)
-      </a>
-    ),
-    disabled: true,
-  },
-  {
-    key: "3",
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.luohanacademy.com"
-      >
-        3rd menu item (disabled)
-      </a>
-    ),
-    disabled: true,
-  },
-  {
-    key: "4",
-    danger: true,
-    label: "a danger item",
-  },
-];
+import MenuIcon from "@public/icons/MenuIcon";
+import { useRouter } from "next/router";
 
 const { Header } = Layout;
 
 const AppHeader = () => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   const { config, setConfig } = useContext(AppConfigContext) as any;
   const { theme } = config;
@@ -78,17 +35,9 @@ const AppHeader = () => {
     }
   };
 
-  // const renderMenu = useCallback(
-  //   (menu: { key: number; label: string }[]) => {
-  //     const tMenu = menu.map((item) => ({
-  //       key: item.key,
-  //       label: t(item.label),
-  //     }));
-
-  //     return <Menu items={tMenu} />;
-  //   },
-  //   [t]
-  // );
+  const navigateToSection = (id: string) => () => {
+    router.push(`/${id}`);
+  };
 
   return (
     <Header className="app-header">
@@ -118,6 +67,9 @@ const AppHeader = () => {
         <a href={`${REACT_APP_URL}/login`}>
           <AppButton buttonTitle={t("header.txt_login")} />
         </a>
+      </div>
+
+      <Space direction="horizontal">
         <span onClick={handleChangeTheme}>
           {theme === "dark" ? (
             <DarkThemeIcon color="black" bgColor="white" />
@@ -137,7 +89,23 @@ const AppHeader = () => {
             />
           </div>
         </Dropdown>
-      </div>
+      </Space>
+      <Dropdown
+        className="app-header__category__responsive"
+        menu={{
+          items: HEADER_CATEGORY.map((item) => ({
+            label: t(item.title),
+            key: item.title,
+            onClick: navigateToSection(item.href),
+          })),
+        }}
+        trigger={["hover"]}
+        placement="bottomRight"
+      >
+        <div>
+          <MenuIcon color="black" />
+        </div>
+      </Dropdown>
     </Header>
   );
 };

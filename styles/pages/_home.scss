@@ -1,5 +1,8 @@
 .home-page__wrap {
   padding: 8%;
+  @include xl {
+    padding: 2rem;
+  }
 }
 
 .home-banner {
@@ -10,12 +13,22 @@
   height: 60rem;
   position: relative;
 
+  @include lg {
+    flex-direction: column;
+    height: fit-content;
+  }
+
   > .text {
     display: flex;
     flex-direction: column;
     width: 40%;
     position: relative;
     z-index: 1;
+
+    @include lg {
+      width: 100%;
+      padding: 2rem;
+    }
   }
 
   > .text > .main {
@@ -35,6 +48,10 @@
     z-index: 1;
     img {
       height: 100%;
+    }
+
+    @include lg {
+      display: none;
     }
   }
 
@@ -72,6 +89,10 @@
   display: flex;
   padding: 3rem;
 
+  @include xl {
+    flex-direction: column;
+  }
+
   // > .background {
   //   width: 100%;
   //   height: 100%;
@@ -108,6 +129,10 @@
     > .link {
       width: calc((100% - 3.2rem) / 2);
       margin: 0.8rem;
+
+      @include md {
+        width: 100%;
+      }
     }
 
     > .link > .explores {
@@ -196,8 +221,10 @@
     position: relative;
     z-index: 1;
     margin: 4rem 0;
-    // box-shadow: var(--common-box-shadow);
-    // border-radius: var(--common-border-radius);
+
+    @include md {
+      flex-direction: column;
+    }
 
     .ant-image {
       flex: 1 0 32%;
@@ -262,6 +289,10 @@
   display: flex;
   border-radius: var(--common-border-radius);
 
+  @include md {
+    flex-direction: column;
+  }
+
   &__content {
     margin: auto;
 
@@ -279,6 +310,15 @@
   flex-direction: column;
   justify-content: center;
   border-radius: var(--common-border-radius);
+
+  @include lg {
+    flex: 1 0 40%;
+  }
+
+  @include md {
+    margin: 0;
+    margin-top: 2rem;
+  }
 }
 
 .apply-now-form > .form-item {
@@ -295,20 +335,65 @@
 
 // compensation
 .home-compensation {
-  display: flex;
-  gap: 2rem;
   margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  > .items {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
 
-  > .compensation-item {
+    @include xl {
+      flex-direction: column;
+    }
+  }
+
+  > .items > .compensation-item {
     flex-basis: calc((100% - 8rem) / 5);
     height: 36rem;
   }
 
-  > .compensation-item:nth-child(even) {
+  > .items > .compensation-item:nth-child(even) {
     background-color: var(--color-primary-orange);
   }
 
-  > .compensation-item:nth-child(odd) {
+  > .items > .compensation-item:nth-child(odd) {
     background-color: var(--color-primary-green);
+  }
+}
+
+.home-frequently-asked-questions {
+  margin-top: 12rem;
+
+  > .collapse {
+    border: 1px solid var(--color-primary-green);
+    background: var(--color-secondary-green);
+  }
+
+  > .collapse > .item > .ant-collapse-header {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  > .collapse > .item > .ant-collapse-header::after {
+    content: "Q.";
+    display: inline-block;
+    font-size: 4rem;
+    color: var(--color-primary-orange);
+    position: absolute;
+  }
+
+  > .collapse > .item > .ant-collapse-header > .ant-collapse-header-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 6rem;
+  }
+
+  > .collapse > .item > .ant-collapse-header > .ant-collapse-expand-icon {
+    display: none;
   }
 }

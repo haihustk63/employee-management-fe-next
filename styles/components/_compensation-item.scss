@@ -1,9 +1,14 @@
 .compensation-item {
-  background-color: var(--color-secondary-red);
   padding: 2rem;
+  border-radius: var(--common-border-radius);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  @include xl {
+    clip-path: none;
+  }
 
   > .content > .title,
   > .content > .description {
@@ -16,5 +21,11 @@
 
   > .svg-icon {
     align-self: center;
+    width: 6rem;
+    height: 6rem;
+
+    @include xl {
+      display: none;
+    }
   }
 }

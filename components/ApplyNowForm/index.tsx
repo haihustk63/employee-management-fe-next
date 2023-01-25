@@ -87,7 +87,6 @@ const ApplyNowForm: FC = () => {
               type={SELECT}
               options={jobListFull}
               placeholder="Choose a job"
-              showSearch
               
             />
             <AppButton
