@@ -6,4 +6,10 @@
   min-width: 10rem;
   color: var(--color-primary-white) !important;
   background-color: var(--color-primary-green);
+
+  @include sm {
+    min-width: fit-content;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }

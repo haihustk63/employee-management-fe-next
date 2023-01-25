@@ -2,6 +2,10 @@
   &__content {
     display: flex;
     justify-content: space-between;
+
+    @include md {
+      flex-direction: column;
+    }
   }
 
   &__contact {
