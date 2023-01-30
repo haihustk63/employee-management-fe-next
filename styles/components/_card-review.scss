@@ -1,0 +1,10 @@
+.card-review {
+  box-shadow: var(--common-box-shadow);
+  display: flex;
+  padding: 10rem 2rem;
+  border-radius: var(--common-border-radius);
+
+  > .content > * {
+    color: var(--color-primary-black);
+  }
+}

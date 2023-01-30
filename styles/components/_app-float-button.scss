@@ -1,0 +1,10 @@
+.app-float-button > .ant-float-btn {
+}
+
+.app-float-button
+  > .ant-float-btn
+  > .ant-float-btn-body
+  > .ant-float-btn-content
+  > .ant-float-btn-description {
+  padding: 1rem;
+}

@@ -1,0 +1,19 @@
+{
+  "common": {
+    "txt_apply_now": "Apply now",
+    "txt_about_us": "About us",
+    "txt_contact": "Contact us",
+    "txt_job": "Jobs",
+    "txt_news": "News"
+  },
+  "header": {
+    "txt_home": "Home",
+    "txt_login": "Login"
+  },
+  "home": {
+    "banner": {
+      "txt_welcome": "Get your dream job today",
+      "txt_welcome_introduction": "Explore all the most exciting job roles based on your interest and study major"
+    }
+  }
+}
