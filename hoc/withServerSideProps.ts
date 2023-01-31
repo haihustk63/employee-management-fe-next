@@ -8,7 +8,7 @@ export const withServerSideProps = (callback?: any) => {
   }) => {
     let propsCallback = {};
     if (callback) {
-      propsCallback = await callback({ ...rest });
+      propsCallback = (await callback({ ...rest })) || {};
     }
 
     if (Object.keys(propsCallback)?.includes("notFound")) {
@@ -16,7 +16,7 @@ export const withServerSideProps = (callback?: any) => {
         notFound: true,
       };
     }
-    
+
     return {
       props: {
         ...propsCallback,
