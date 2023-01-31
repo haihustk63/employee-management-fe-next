@@ -7,7 +7,7 @@ import AppButton from "@components/AppButton";
 const { Text, Title } = Typography;
 
 const Banner = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
 
   return (
     <div className="home-banner">

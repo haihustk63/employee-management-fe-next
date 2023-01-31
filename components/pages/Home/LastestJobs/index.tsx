@@ -11,7 +11,7 @@ import { HomeContext } from "pages";
 const { Title } = Typography;
 
 const LastestJobs: FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
   const { jobList = [] } = useContext(HomeContext) as any;
   const { ref, animated } = useAnimated();
 

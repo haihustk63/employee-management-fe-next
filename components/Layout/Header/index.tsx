@@ -21,7 +21,7 @@ import { useRouter } from "next/router";
 const { Header } = Layout;
 
 const AppHeader = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
   const router = useRouter();
 
   const { config, setConfig } = useContext(AppConfigContext) as any;

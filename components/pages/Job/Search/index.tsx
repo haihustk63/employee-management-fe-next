@@ -6,7 +6,7 @@ import FormSearch from "./FormSearch";
 const { Title } = Typography;
 
 const Search = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
 
   return (
     <div className="job-search" id="search-jobs">

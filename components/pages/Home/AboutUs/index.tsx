@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next";
 const { Title, Text } = Typography;
 
 const AboutUs = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
   const { ref, animated } = useAnimated();
 
   return (

@@ -33,7 +33,7 @@ const branches = [
 ];
 
 const AppFooter = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
 
   return (
     <div className="app-footer" id="app-footer">
