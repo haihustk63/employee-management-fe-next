@@ -23,7 +23,7 @@ const initialValues = {
 };
 
 const FormSearch: FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
   const { allPositions = [], handleGetJobs } = useContext(
     JobManagementContext
   ) as any;

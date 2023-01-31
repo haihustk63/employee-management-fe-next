@@ -31,7 +31,7 @@ const validateSchema = object({
 });
 
 const ApplyNowForm: FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation() as any;
 
   const { jobListFull, submitApplyForm, handleToggleModal } = useContext(
     HomeContext
