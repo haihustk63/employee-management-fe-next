@@ -52,6 +52,7 @@ export default function Home({ allPositions, jobList, jobListFull }: any) {
           <EmployeeReviews />
           <Compensation />
           <FrequentlyAskedQuestion />
+          {/* hiring flow here */}
           <ApplyNow />
         </div>
         <AppModal
