@@ -25,7 +25,7 @@ const initialValues = {
 
 const validateSchema = object({
   name: string().required("Name is required"),
-  email: string().required("Email is required"),
+  email: string().required("Email is required").email("Invalid email"),
   cvLink: string().required("CV is required"),
   jobId: number().required("Please choose a job"),
 });
@@ -49,7 +49,7 @@ const ApplyNowForm: FC = () => {
       onSubmit={handleSubmit}
       validationSchema={validateSchema}
     >
-      {({ values, errors, touched, handleSubmit, handleChange }) => {
+      {({ values, handleSubmit, handleChange }) => {
         return (
           <Form onSubmit={handleSubmit} className="apply-now-form">
             <Title className="app-title">{t("common.txt_apply_now")}</Title>
@@ -87,7 +87,6 @@ const ApplyNowForm: FC = () => {
               type={SELECT}
               options={jobListFull}
               placeholder="Choose a job"
-              
             />
             <AppButton
               buttonTitle={t("common.txt_apply_now")}

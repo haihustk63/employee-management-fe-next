@@ -40,7 +40,7 @@ export const getServerSideProps: GetServerSideProps = withServerSideProps(
         description: item?.description,
       }));
       const jobResult = await jobService.getAllJobs();
-      const jobList = jobResult?.allJobs;
+      const jobList = jobResult?.data;
       return { jobList, allPositions };
     } catch (err) {
       console.error(err);

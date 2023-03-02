@@ -44,7 +44,7 @@ const AppHeader = () => {
       <Link href="/">
         <Image
           className="app-header__logo"
-          src="/images/app_logo.png"
+          src="/images/logo-tran-green.png"
           alt="App Logo"
           preview={false}
         />

@@ -8,6 +8,7 @@ import "@styles/globals.css";
 import "@styles/index.scss";
 import { FloatButton } from "antd";
 import AppConfigWrapper from "context/app-config";
+import AppChat from "@components/AppChat";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <AppFloatButton description="Apply now" href="#home-apply-now" />
         <FloatButton.BackTop />
+        <AppChat />
       </CommonLayout>
     </AppConfigWrapper>
   );

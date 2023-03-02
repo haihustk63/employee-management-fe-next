@@ -13,7 +13,9 @@ const ApplyNow = () => {
       className="home-apply-now"
       id="home-apply-now"
       ref={ref}
-      style={{ animation: animated ? "fadeToClear ease-in 1s" : undefined }}
+      style={{
+        animation: animated ? "fadeToClear ease-in 1s" : undefined,
+      }}
     >
       <div className="home-apply-now__content">
         <Title>We are waiting for you!</Title>
