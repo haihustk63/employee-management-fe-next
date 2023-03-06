@@ -1,22 +1,13 @@
-import { Dropdown, Layout, Menu, MenuProps, Space, Typography } from "antd";
+import { Dropdown, Image, Layout, Space } from "antd";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { Image } from "antd";
 
-import {
-  HEADER_CATEGORY,
-  LANGUAGE_SUPPORT,
-  REACT_APP_URL,
-} from "constants/common";
 import AppButton from "@components/AppButton";
-import { useContext } from "react";
-import { AppConfigContext } from "context/app-config";
-import DarkThemeIcon from "@public/icons/DarkThemeIcon";
-import LightThemeIcon from "@public/icons/LightThemeIcon";
-import AppDropDown from "@components/AppDropdown";
-import LanguageIcon from "@public/icons/LanguageIcon";
 import MenuIcon from "@public/icons/MenuIcon";
+import { HEADER_CATEGORY, REACT_APP_URL } from "constants/common";
+import { AppConfigContext } from "context/app-config";
 import { useRouter } from "next/router";
+import { useContext } from "react";
 
 const { Header } = Layout;
 
@@ -47,6 +38,7 @@ const AppHeader = () => {
           src="/images/logo-tran-green.png"
           alt="App Logo"
           preview={false}
+          loading="lazy"
         />
       </Link>
 
@@ -70,14 +62,14 @@ const AppHeader = () => {
       </div>
 
       <Space direction="horizontal">
-        <span onClick={handleChangeTheme}>
+        {/* <span onClick={handleChangeTheme}>
           {theme === "dark" ? (
             <DarkThemeIcon color="black" bgColor="white" />
           ) : (
             <LightThemeIcon color="white" bgColor="black" />
           )}
-        </span>
-        <Dropdown
+        </span> */}
+        {/* <Dropdown
           menu={{ items: LANGUAGE_SUPPORT }}
           trigger={["hover"]}
           placement="bottomRight"
@@ -88,7 +80,7 @@ const AppHeader = () => {
               bgColor={theme === "dark" ? "white" : "black"}
             />
           </div>
-        </Dropdown>
+        </Dropdown> */}
       </Space>
       <Dropdown
         className="app-header__category__responsive"

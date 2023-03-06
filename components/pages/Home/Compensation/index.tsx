@@ -1,8 +1,7 @@
 import { COMPENSATION_ITEMS } from "@constants/common";
-import React from "react";
 import { Typography } from "antd";
-const { Text, Title } = Typography;
 import CompensationItem from "./CompensationItem";
+const { Text, Title } = Typography;
 
 const Compensation = () => {
   return (

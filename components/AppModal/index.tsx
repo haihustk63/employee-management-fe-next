@@ -3,27 +3,17 @@ import { FC } from "react";
 import { IAppModalProps } from "./interface";
 
 const AppModal: FC<IAppModalProps> = ({
-  afterClose,
-  bodyStyle,
   cancelText = "Cancel",
   centered = false,
   closable = true,
   maskClosable = true,
-  closeIcon,
-  confirmLoading,
-  destroyOnClose,
-  footer,
   keyboard = true,
   mask = true,
-  maskStyle,
   okText,
-  okType,
   onCancel,
   onOk,
   open,
   title,
-  wrapClassName,
-  zIndex,
   children,
 }) => {
   return (

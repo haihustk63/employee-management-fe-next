@@ -3,17 +3,25 @@ import Head from "next/head";
 import { createContext, useState } from "react";
 
 import AppModal from "@components/AppModal";
-import AboutUs from "@components/pages/Home/AboutUs";
-import ApplyNow from "@components/pages/Home/ApplyNow";
 import Banner from "@components/pages/Home/Banner";
-import EmployeeReviews from "@components/pages/Home/EmployeeReviews";
-import LastestJobs from "@components/pages/Home/LastestJobs";
 import { withServerSideProps } from "hoc/withServerSideProps";
 import { candidateService } from "services/candidate";
 import { positionService } from "services/position";
-import Compensation from "@components/pages/Home/Compensation";
-import FrequentlyAskedQuestion from "@components/pages/Home/FAQ";
 import { jobService } from "services/jobs";
+import dynamic from "next/dynamic";
+
+const AboutUs = dynamic(() => import("@components/pages/Home/AboutUs"));
+const EmployeeReviews = dynamic(
+  () => import("@components/pages/Home/EmployeeReviews")
+);
+const LastestJobs = dynamic(() => import("@components/pages/Home/LastestJobs"));
+const ApplyNow = dynamic(() => import("@components/pages/Home/ApplyNow"));
+const Compensation = dynamic(
+  () => import("@components/pages/Home/Compensation")
+);
+const FrequentlyAskedQuestion = dynamic(
+  () => import("@components/pages/Home/FAQ")
+);
 
 export const HomeContext = createContext({});
 

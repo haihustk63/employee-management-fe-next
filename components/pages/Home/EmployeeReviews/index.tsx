@@ -1,10 +1,7 @@
-import { FC } from "react";
 import { Carousel } from "antd";
-import { Typography } from "antd";
+import { FC } from "react";
 
 import CardReview from "@components/pages/Home/EmployeeReviews/CardReview";
-
-const { Text } = Typography;
 
 const listReviews = [
   {

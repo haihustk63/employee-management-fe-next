@@ -20,20 +20,22 @@ const ApplyNow = () => {
       <div className="home-apply-now__content">
         <Title>We are waiting for you!</Title>
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a
-          malesuada leo, vel ornare erat. Suspendisse rutrum, enim eget gravida
-          tincidunt, mi quam aliquam augue, et pharetra sem tortor eu odio.
-          Quisque in ante mattis risus sagittis consequat. Mauris eleifend,
-          ligula id laoreet pellentesque, leo velit pulvinar enim, vel luctus
-          urna risus non magna. Mauris vestibulum bibendum lacinia. Cras semper
-          auctor ipsum in fermentum. Integer sodales mattis risus. Curabitur
-          ultrices lectus nec erat porta, ut mollis elit egestas. Nullam justo
-          nibh, congue vel pretium at, feugiat sed lacus. Pellentesque habitant
-          morbi tristique senectus et netus et malesuada fames ac turpis
-          egestas. Morbi interdum tortor magna, eu aliquam magna euismod vel.
-          Proin lacinia risus libero, vel laoreet ligula consectetur sit amet.
-          Donec dignissim elementum lorem eget aliquam. Vivamus sit amet
-          volutpat ante.
+          Sometimes waiting for the next opportunity can cause stress. Waiting
+          does not means just sitting and doing nothing. You should be
+          remembering the accomplishments that have allowed you to look at the
+          new opportunity. Remember how frighten you were of the unknown and not
+          knowing the right next step. For example, graduating from high school,
+          not knowing whether the next move was a job, college or the military.
+          As you go forward in your life journey, this waiting thing will be
+          with you as a reminder that your aspirations have merit. I wait with
+          anticipation that what I have already accomplished in my personal and
+          business life has lead me to many new opportunities. Waiting is
+          stressful only if you forget that you have already done the hard work
+          before opportunity showed up. Only by waiting can you grasp the
+          importance of always breaking new ground. Forget the old barriers
+          like; you will never have enough money, you are too old to do that,
+          its never been done like that before, etc. My favorite waiting stress
+          moment is &quot;Now is not the right time for your to start.&quot;
         </Text>
       </div>
       <ApplyNowForm />

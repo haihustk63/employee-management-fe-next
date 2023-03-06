@@ -2,7 +2,7 @@ import JobList from "@components/pages/Job/JobList";
 import Search from "@components/pages/Job/Search";
 import { withServerSideProps } from "hoc/withServerSideProps";
 import { GetServerSideProps } from "next";
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import { jobService } from "services/jobs";
 import { positionService } from "services/position";
 
@@ -13,7 +13,7 @@ export default function JobPage({ jobList, allPositions }: any) {
 
   const handleGetJobs = async (params: any) => {
     const newResult = await jobService.getAllJobs(params);
-    const newJobs = newResult?.allJobs;
+    const newJobs = newResult?.data;
     setCurrentJobList(newJobs);
   };
 

@@ -1,17 +1,16 @@
 import { Form, Formik } from "formik";
-import { FC, useContext, useEffect, useMemo, useRef, useState } from "react";
-import debounce from "lodash/debounce";
 import { useTranslation } from "next-i18next";
+import { FC, useContext, useRef } from "react";
 
-import { FORM_ITEM_TYPES, JOB_LEVELS, JOB_TYPES } from "constants/common";
-import FormItem from "@components/FormItem";
 import AppButton from "@components/AppButton";
-import WorkOnComputerIcon from "@public/icons/WorkOnComputerIcon";
+import FormItem from "@components/FormItem";
 import ClockIcon from "@public/icons/ClockIcon";
-import LevelIcon from "@public/icons/LevelIcon";
-import { addKeyToData, makeCleanObject } from "utils";
-import { JobManagementContext } from "pages/jobs";
 import { GlobalLeaderIcon } from "@public/icons/GlobalLeaderIcon";
+import LevelIcon from "@public/icons/LevelIcon";
+import WorkOnComputerIcon from "@public/icons/WorkOnComputerIcon";
+import { FORM_ITEM_TYPES, JOB_LEVELS, JOB_TYPES } from "constants/common";
+import { JobManagementContext } from "pages/jobs";
+import { addKeyToData } from "utils";
 
 const { TEXT, SELECT } = FORM_ITEM_TYPES;
 

@@ -1,5 +1,5 @@
-import React, { FC } from "react";
 import { Typography } from "antd";
+import { FC } from "react";
 
 import StarIcon from "@public/icons/StarIcon";
 
@@ -9,9 +9,9 @@ const CompensationItem: FC<{ item: any }> = ({ item }) => {
   return (
     <div className="compensation-item">
       <div className="content">
-        <Title className="title" level={3}>
+        <Text className="title" style={{ fontSize: "2.4rem", display: "block" }}>
           {item.title}
-        </Title>
+        </Text>
         <Text className="description">{item.content}</Text>
       </div>
       <StarIcon color="white" />

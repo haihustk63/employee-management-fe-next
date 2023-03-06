@@ -28,9 +28,10 @@ const LastestJobs: FC = () => {
           alt="JS Coding"
           preview={false}
           className="image"
+          loading="lazy"
         />
       </div>
-      <ul className="list">
+      <div className="list">
         {jobList.map((jobItem: any) => {
           return <JobCard key={jobItem.id} jobItem={jobItem} />;
         })}
@@ -46,7 +47,7 @@ const LastestJobs: FC = () => {
             </Space>
           </div>
         </Link>
-      </ul>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import { Dropdown } from "antd";
-import Link from "next/link";
 import { FC } from "react";
 
 interface IAppDropdown {

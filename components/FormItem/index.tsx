@@ -1,9 +1,9 @@
-import { FC, ReactNode } from "react";
+import { Input, Select, Typography } from "antd";
 import { ErrorMessage, Field } from "formik";
-import { Input, InputNumber, Select, Typography } from "antd";
+import { FC } from "react";
 
-import { IFieldProps, IFormItemProps } from "./interface";
 import { FORM_ITEM_TYPES } from "@constants/common";
+import { IFieldProps, IFormItemProps } from "./interface";
 
 const { TEXT, TEXTAREA, SELECT } = FORM_ITEM_TYPES;
 const { TextArea, Password } = Input;

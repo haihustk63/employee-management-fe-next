@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { Image, Typography } from "antd";
+import { FC } from "react";
 
 import { ICardReviewProps } from "./interface";
 
@@ -19,13 +19,15 @@ const CardReview: FC<ICardReviewProps> = ({
       style={{ backgroundColor: `var(--color-secondary-${bgColor})` }}
     >
       <div className="image">
-        <Image src={imageUrl} alt={imageAlt} preview={false} />
+        <Image src={imageUrl} alt={imageAlt} preview={false} loading="lazy" />
       </div>
 
       <div className="content">
-        <Title>{authorName}</Title>
-        <Title level={5}>{authorPosition}</Title>
-        <Title level={4}>&ldquo;{authorReview}&rdquo;</Title>
+        <Text style={{ fontSize: "4rem", display: "block" }}>{authorName}</Text>
+        <Text>{authorPosition}</Text>
+        <Text style={{ fontSize: "2rem", display: "block" }}>
+          &ldquo;{authorReview}&rdquo;
+        </Text>
       </div>
     </div>
   );

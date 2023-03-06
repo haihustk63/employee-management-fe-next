@@ -24,6 +24,7 @@ const Banner = () => {
         preview={false}
         src="images/bg_home_banner.svg"
         alt={t("home.banner.txt_alt_banner")}
+        loading="lazy"
       />
       <div className="pattern"></div>
     </div>

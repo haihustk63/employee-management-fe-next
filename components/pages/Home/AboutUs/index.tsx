@@ -21,6 +21,7 @@ const AboutUs = () => {
           alt={t("home.about.txt_alt_banner")}
           className="image"
           preview={false}
+          loading="lazy"
         />
         <Text className="text">About us</Text>
       </div>
@@ -31,9 +32,10 @@ const AboutUs = () => {
             src="images/graphic_creative_thinking.svg"
             alt={t("home.about.txt_alt_banner")}
             preview={false}
+            loading="lazy"
           />
           <div className="content">
-            <Title className="title" level={2}>
+            <Title className="title" level={1}>
               {t("home.about.txt_our_story")}
             </Title>
             <Text>{t("home.about.txt_our_story_content")}</Text>
@@ -45,9 +47,10 @@ const AboutUs = () => {
             src="images/graphic_wandering_mind.svg"
             alt={t("home.about.txt_alt_banner")}
             preview={false}
+            loading="lazy"
           />
           <div className="content">
-            <Title className="title" level={2}>
+            <Title className="title" level={1}>
               {t("home.about.txt_our_mission")}
             </Title>
             <Text>{t("home.about.txt_our_mission_content")}</Text>

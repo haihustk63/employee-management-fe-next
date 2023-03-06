@@ -1,4 +1,3 @@
-import React from "react";
 import { purityContent } from "utils";
 
 const RenderHtml = ({ htmlContent }: any) => {

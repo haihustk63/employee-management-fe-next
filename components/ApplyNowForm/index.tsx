@@ -55,6 +55,7 @@ const ApplyNowForm: FC = () => {
             <Title className="app-title">{t("common.txt_apply_now")}</Title>
             <FormItem
               name="name"
+              label="Name"
               value={values.name}
               type={TEXT}
               onChange={handleChange}
@@ -62,6 +63,7 @@ const ApplyNowForm: FC = () => {
             />
             <FormItem
               name="phone"
+              label="Phone Number"
               value={values.phone}
               type={TEXT}
               onChange={handleChange}
@@ -69,6 +71,7 @@ const ApplyNowForm: FC = () => {
             />
             <FormItem
               name="email"
+              label="Email"
               value={values.email}
               type={TEXT}
               onChange={handleChange}
@@ -76,6 +79,7 @@ const ApplyNowForm: FC = () => {
             />
             <FormItem
               name="cvLink"
+              label="CV Link"
               value={values.cvLink}
               type={TEXT}
               onChange={handleChange}
@@ -83,6 +87,7 @@ const ApplyNowForm: FC = () => {
             />
             <FormItem
               name="jobId"
+              label="Job"
               value={values.jobId}
               type={SELECT}
               options={jobListFull}
