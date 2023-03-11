@@ -5,10 +5,10 @@ import { createContext, useState } from "react";
 import AppModal from "@components/AppModal";
 import Banner from "@components/pages/Home/Banner";
 import { withServerSideProps } from "hoc/withServerSideProps";
-import { candidateService } from "services/candidate";
-import { positionService } from "services/position";
-import { jobService } from "services/jobs";
 import dynamic from "next/dynamic";
+import { candidateService } from "services/candidate";
+import { jobService } from "services/jobs";
+import { positionService } from "services/position";
 
 const AboutUs = dynamic(() => import("@components/pages/Home/AboutUs"));
 const EmployeeReviews = dynamic(
@@ -60,7 +60,6 @@ export default function Home({ allPositions, jobList, jobListFull }: any) {
           <EmployeeReviews />
           <Compensation />
           <FrequentlyAskedQuestion />
-          {/* hiring flow here */}
           <ApplyNow />
         </div>
         <AppModal

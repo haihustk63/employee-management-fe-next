@@ -8,7 +8,7 @@ import "@styles/index.scss";
 import AppConfigWrapper from "context/app-config";
 import dynamic from "next/dynamic";
 
-const AppChat = dynamic(() => import("@components/AppChat"));
+const AppChat = dynamic(() => import("@components/AppChat") as any);
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppConfigWrapper>
