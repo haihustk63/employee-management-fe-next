@@ -5,7 +5,7 @@ export const REACT_APP_URL = process.env.NEXT_PUBLIC_REACT_APP;
 export const HEADER_CATEGORY = [
   {
     title: "common.txt_job",
-    href: "#search-jobs",
+    href: "/jobs",
   },
   {
     title: "common.txt_about_us",
@@ -60,28 +60,33 @@ export const LANGUAGE_SUPPORT: MenuProps["items"] = [
 export const COMPENSATION_ITEMS = [
   {
     key: 1,
-    title: "Probationary period with 100% salary",
-    content: "You can rereive 100% salary in probationary period",
+    title: "Flexible Work",
+    content:
+      "The ideal working environment isn't fixed, which is why here at Ekoios, you'll have the freedom to work anywhere you want.",
   },
   {
     key: 2,
-    title: "Promotion chances",
-    content: "You can rereive 100% salary in probationary period",
+    title: "Health Benefits",
+    content:
+      "We always try to take care of our own. Our health benefits package includes health insurance, social insurance, unemployment insurance and commuter benefits.",
   },
   {
     key: 3,
-    title: "Experience with many positions",
-    content: "You can rereive 100% salary in probationary period",
+    title: "Learning And Career Growth",
+    content:
+      "We're all about personal & professional development. From the very first day at Ekoios, you'll be empowered with various types of learning activities, trainings, as well as coaching.",
   },
   {
     key: 4,
-    title: "Full salary's insurance",
-    content: "You can rereive 100% salary in probationary period",
+    title: "Facilities",
+    content:
+      "Anything you need to be excellent at what you do—any thing at all—will be provided for your convenience.",
   },
   {
     key: 5,
-    title: "Traveling, team-building",
-    content: "You can rereive 100% salary in probationary period",
+    title: "Compensation",
+    content:
+      "We know of the best way to give it back—with compensation. We offer competitive compensation along with attractive rewards and performance-based bonuses.",
   },
 ];
 
@@ -159,58 +164,52 @@ export const JOB_LEVELS: { [key: string]: string | number }[] = [
 export const FREQUENTLY_ASKED_QUESTIONS = [
   {
     key: "1",
-    question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+    question: "What do I need to know before contacting you?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "Well, the most important thing to know is what do you want to accomplish. Why do I need this software? What for? What should it do? Having a clear vision in mind is crucial when ordering a software application. You don't want to spend many months developing it with us without being sure what you need. If you have no experience in app development feel free to read our blog entry on that topic. We'll also be glad to help you get started, building projects from scratch is nothing new for us.",
   },
   {
     key: "2",
-    question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+    question: "What kind of people are you looking for?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "We look for people who are passionate about our values, who have professional attitude, and who show us that they’re passionate about the role they’re applying for. ",
   },
   {
     key: "3",
-    question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+    question: "How often do you update the open positions on your website ?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "The career site is updated in real-time as positions become available. All positions listed are open to applications.",
   },
   {
     key: "4",
-    question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+    question: "What documents do I need to apply?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "To help us get to know you better, we'll need an up-to-date copy of your CV/resume. You'll also have the opportunity to add a cover letter if you want to tell us more. ",
   },
   {
     key: "5",
     question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+      "Who can I contact if I have difficulty submitting my resume / application?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "If you need assistance, please reach out to careers@softwaregroup.com",
   },
   {
     key: "6",
     question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+      " What should I do if I cannot find an opportunity that matches my skills?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "You can make a general application. We would invite you to submit your details using our general profile feature. Our company is growing and there is a good chance that an opportunity requiring your skills and experience will be available in the future. Your information will be made available to our recruiting professionals. We will compare your skills and experience with our ongoing requirements and will be able to contact you when a suitable opportunity arises.",
   },
   {
     key: "7",
-    question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+    question: "Will you contact me regarding the status of my application?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "We're really sorry but due to the amount of applications we receive each day, we can't always give individual feedback in the first stages of our application process. Your application will be reviewed, and someone on the recruiting team will reach out directly if they would like to schedule an interview. If there is no follow up on your application for the time being, we will contact you should an opening that fits your expertise appear within a year, after that a new application will have to be made for an open position.",
   },
   {
     key: "8",
-    question:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dumm",
+    question: "How do you guarantee product quality?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'",
+      "We evaluate the result after every two weeks, we test our work (we conduct both development and acceptance tests), we present it to you, we apply your feedback so you know you get what you are paying for.",
   },
 ];

@@ -1,6 +1,7 @@
 import { Layout } from "antd";
 import cx from "classnames";
 import { FC } from "react";
+import AppFooter from "./Footer";
 
 import AppHeader from "./Header";
 
@@ -11,7 +12,7 @@ const CommonLayout: FC<{ children: any }> = ({ children }) => {
     <main className={cx("common-layout")}>
       <AppHeader />
       <Content>{children}</Content>
-      {/* <AppFooter /> */}
+      <AppFooter />
     </main>
   );
 };

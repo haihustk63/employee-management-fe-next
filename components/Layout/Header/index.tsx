@@ -15,17 +15,6 @@ const AppHeader = () => {
   const { t } = useTranslation() as any;
   const router = useRouter();
 
-  const { config, setConfig } = useContext(AppConfigContext) as any;
-  const { theme } = config;
-
-  const handleChangeTheme = () => {
-    if (theme === "dark") {
-      setConfig((prev: any) => ({ ...prev, theme: "light" }));
-    } else {
-      setConfig((prev: any) => ({ ...prev, theme: "dark" }));
-    }
-  };
-
   const navigateToSection = (id: string) => () => {
     router.push(`/${id}`);
   };

@@ -64,12 +64,12 @@ export default function Home({ allPositions, jobList, jobListFull }: any) {
           <ApplyNow />
         </div>
         <AppModal
-          title="Example modal"
+          title="Congratulation!"
           open={visibleModal}
           onCancel={handleToggleModal}
           onOk={handleToggleModal}
         >
-          <h1>Bạn đã gửi thông tin thành công!</h1>
+          <h1>Your application is sent!</h1>
         </AppModal>
       </div>
     </HomeContext.Provider>

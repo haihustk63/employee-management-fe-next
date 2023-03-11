@@ -15,7 +15,7 @@ import { addKeyToData } from "utils";
 const { TEXT, SELECT } = FORM_ITEM_TYPES;
 
 const initialValues = {
-  title: "",
+  keyword: "",
   typeOfJob: undefined,
   level: undefined,
   positionId: undefined,
@@ -104,10 +104,10 @@ const FormSearch: FC = () => {
         return (
           <Form onSubmit={handleSubmit} className="job-form-search">
             <FormItem
-              name="title"
+              name="keyword"
               placeholder={t("home.search.txt_keyword_placeholder")}
               type={TEXT}
-              value={values.title}
+              value={values.keyword}
               onChange={handleChange}
               prefix={<WorkOnComputerIcon color="green" />}
             />

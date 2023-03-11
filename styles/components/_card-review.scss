@@ -1,10 +1,27 @@
 .card-review {
   box-shadow: var(--common-box-shadow);
   display: flex;
-  padding: 10rem 2rem;
   border-radius: var(--common-border-radius);
+
+  > .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   > .content > * {
     color: var(--color-primary-black);
+  }
+
+  > .image > .ant-image {
+    display: block;
+  }
+
+  @include md {
+    flex-direction: column;
+    .ant-image-img {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 }

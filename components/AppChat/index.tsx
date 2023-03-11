@@ -20,7 +20,6 @@ const AppChat = () => {
 
     setup(document, "script");
   }, []);
-  return <div>AppChat</div>;
 };
 
 export default AppChat;

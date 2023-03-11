@@ -6,8 +6,8 @@ import AppTag from "@components/AppTag";
 import { JOB_LEVELS, JOB_TYPES } from "@constants/common";
 import dynamic from "next/dynamic";
 
-const RenderJobDetail = dynamic(
-  import("@components/pages/JobDetail/RenderHtml"),
+const RenderJobContent = dynamic(
+  import("@components/pages/JobDetail/RenderJobContent"),
   {
     ssr: false,
     loading: () => <span>loading...</span>,
@@ -31,7 +31,7 @@ const JobDetail = ({ jobInfo }: any) => {
         <AppTag color="blue">{position.name}</AppTag>
       </div>
 
-      <RenderJobDetail htmlContent={jobDetail} />
+      <RenderJobContent htmlContent={jobDetail} />
     </div>
   );
 };
