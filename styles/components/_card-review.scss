@@ -9,6 +9,16 @@
     justify-content: center;
   }
 
+  > .content > .name {
+    font-size: 4rem;
+    display: block;
+  }
+
+  > .content > .comment {
+    font-size: 2rem;
+    display: block;
+  }
+
   > .content > * {
     color: var(--color-primary-black);
   }
@@ -22,6 +32,16 @@
     .ant-image-img {
       width: 100% !important;
       height: 100% !important;
+    }
+
+    > .content > .name {
+      font-size: 2.4rem;
+      display: block;
+    }
+
+    > .content > .comment {
+      font-size: 1.4rem;
+      display: block;
     }
   }
 }

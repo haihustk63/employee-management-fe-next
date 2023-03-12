@@ -23,11 +23,9 @@ const CardReview: FC<ICardReviewProps> = ({
       </div>
 
       <div className="content">
-        <Text style={{ fontSize: "4rem", display: "block" }}>{authorName}</Text>
+        <Text className="name">{authorName}</Text>
         <Text>{authorPosition}</Text>
-        <Text style={{ fontSize: "2rem", display: "block" }}>
-          &ldquo;{authorReview}&rdquo;
-        </Text>
+        <Text className="comment">&ldquo;{authorReview}&rdquo;</Text>
       </div>
     </div>
   );

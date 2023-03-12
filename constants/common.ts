@@ -4,20 +4,12 @@ export const REACT_APP_URL = process.env.NEXT_PUBLIC_REACT_APP;
 
 export const HEADER_CATEGORY = [
   {
+    title: "header.txt_home",
+    href: "/",
+  },
+  {
     title: "common.txt_job",
     href: "/jobs",
-  },
-  {
-    title: "common.txt_about_us",
-    href: "#home-about-us",
-  },
-  {
-    title: "common.txt_compensation",
-    href: "#home-compensation",
-  },
-  {
-    title: "common.txt_faq",
-    href: "#home-faq",
   },
   {
     title: "common.txt_contact",

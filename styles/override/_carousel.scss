@@ -13,4 +13,10 @@
     border-radius: 50%;
     background-color: var(--color-primary-orange);
   }
+
+  @include md {
+    > .slick-slider > .slick-dots {
+      bottom: -2rem;
+    }
+  }
 }

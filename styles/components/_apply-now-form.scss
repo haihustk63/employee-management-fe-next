@@ -6,4 +6,18 @@
   flex-direction: column;
   gap: 1rem;
   height: 50rem;
+
+  > button {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+.modal-apply-now {
+  .apply-now-form {
+    padding: 1rem;
+    box-shadow: none;
+    margin: 0;
+    height: 50rem;
+  }
 }

@@ -7,11 +7,11 @@ import MenuIcon from "@public/icons/MenuIcon";
 import { HEADER_CATEGORY, REACT_APP_URL } from "constants/common";
 import { AppConfigContext } from "context/app-config";
 import { useRouter } from "next/router";
-import { useContext } from "react";
+import { FC, useContext } from "react";
 
 const { Header } = Layout;
 
-const AppHeader = () => {
+const AppHeader: FC<{ toggleApplyModal: any }> = ({ toggleApplyModal }) => {
   const { t } = useTranslation() as any;
   const router = useRouter();
 
@@ -42,35 +42,15 @@ const AppHeader = () => {
       </ul>
 
       <div className="app-header__apply">
-        <Link href="#home-apply-now">
-          <AppButton buttonTitle={t("common.txt_apply_now")} />
-        </Link>
+        <AppButton
+          buttonTitle={t("common.txt_apply_now")}
+          onClick={toggleApplyModal}
+        />
         <a href={`${REACT_APP_URL}/login`}>
           <AppButton buttonTitle={t("header.txt_login")} />
         </a>
       </div>
 
-      <Space direction="horizontal">
-        {/* <span onClick={handleChangeTheme}>
-          {theme === "dark" ? (
-            <DarkThemeIcon color="black" bgColor="white" />
-          ) : (
-            <LightThemeIcon color="white" bgColor="black" />
-          )}
-        </span> */}
-        {/* <Dropdown
-          menu={{ items: LANGUAGE_SUPPORT }}
-          trigger={["hover"]}
-          placement="bottomRight"
-        >
-          <div>
-            <LanguageIcon
-              color={theme === "dark" ? "black" : "white"}
-              bgColor={theme === "dark" ? "white" : "black"}
-            />
-          </div>
-        </Dropdown> */}
-      </Space>
       <Dropdown
         className="app-header__category__responsive"
         menu={{
