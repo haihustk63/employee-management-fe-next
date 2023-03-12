@@ -18,4 +18,9 @@
     text-transform: uppercase;
     color: var(--color-primary-orange);
   }
+
+  .detail {
+    border-radius: var(--common-border-radius);
+    font-size: 1.2rem;
+  }
 }

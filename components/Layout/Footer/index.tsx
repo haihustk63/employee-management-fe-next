@@ -36,7 +36,7 @@ const AppFooter = () => {
         <div className="app-footer__contact">
           <Text>Contact us</Text>
           <Text>
-            <MailFilled />: harrypham@example.com
+            <MailFilled />: recruitment@myhrm.com
           </Text>
           <Text>
             <PhoneFilled />: 0379452159

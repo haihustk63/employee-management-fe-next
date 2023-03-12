@@ -2,11 +2,16 @@ import { Typography } from "antd";
 
 import ApplyNowForm from "@components/ApplyNowForm";
 import { useAnimated } from "hooks";
+import { useContext } from "react";
+import { HomeContext } from "pages";
 
 const { Title, Text } = Typography;
 
 const ApplyNow = () => {
   const { ref, animated } = useAnimated();
+  const { handleToggleModal, jobListFull, submitApplyForm } = useContext(
+    HomeContext
+  ) as any;
 
   return (
     <div
@@ -38,7 +43,11 @@ const ApplyNow = () => {
           moment is &quot;Now is not the right time for your to start.&quot;
         </Text>
       </div>
-      <ApplyNowForm />
+      <ApplyNowForm
+        handleToggleModal={handleToggleModal}
+        jobListFull={jobListFull}
+        submitApplyForm={submitApplyForm}
+      />
     </div>
   );
 };

@@ -33,7 +33,16 @@ const LastestJobs: FC = () => {
       </div>
       <div className="list">
         {jobList.map((jobItem: any) => {
-          return <JobCard key={jobItem.id} jobItem={jobItem} />;
+          return (
+            <Link
+              href={`/job-detail/${jobItem.id}`}
+              key={jobItem.id}
+              target="_blank"
+              className="link"
+            >
+              <JobCard jobItem={jobItem} />
+            </Link>
+          );
         })}
         <Link className="link" href="/jobs">
           <div className="explores">

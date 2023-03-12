@@ -89,11 +89,7 @@ export const getServerSideProps: GetServerSideProps = withServerSideProps(
       const jobList = jobResult?.data.filter(
         (item: any, index: number) => index <= 4
       );
-      const jobListFull = jobResult?.data.map((item: any, index: number) => ({
-        label: item?.title,
-        value: item?.id,
-        key: item?.id,
-      }));
+      const jobListFull = jobResult?.data;
       return { allPositions, jobList, jobListFull };
     } catch (err) {
       console.error(err);

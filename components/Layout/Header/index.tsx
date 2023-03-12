@@ -1,13 +1,12 @@
-import { Dropdown, Image, Layout, Space } from "antd";
+import { Dropdown, Image, Layout } from "antd";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 import AppButton from "@components/AppButton";
 import MenuIcon from "@public/icons/MenuIcon";
 import { HEADER_CATEGORY, REACT_APP_URL } from "constants/common";
-import { AppConfigContext } from "context/app-config";
 import { useRouter } from "next/router";
-import { FC, useContext } from "react";
+import { FC } from "react";
 
 const { Header } = Layout;
 
