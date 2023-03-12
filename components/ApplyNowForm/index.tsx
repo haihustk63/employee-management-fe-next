@@ -1,6 +1,6 @@
 import { Formik, Form } from "formik";
 import { Typography } from "antd";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useContext } from "react";
 import { useTranslation } from "next-i18next";
 import { object, string, number } from "yup";
@@ -13,7 +13,7 @@ import { HomeContext } from "pages";
 
 const { TEXT, SELECT } = FORM_ITEM_TYPES;
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const initialValues = {
   name: "",
@@ -37,10 +37,17 @@ const ApplyNowForm: FC = () => {
     HomeContext
   ) as any;
 
-  const handleSubmit = (data: any, { resetForm }: any) => {
-    submitApplyForm(data);
-    resetForm?.();
-    handleToggleModal();
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (data: any, { resetForm }: any) => {
+    try {
+      setError("");
+      await submitApplyForm(data);
+      resetForm?.();
+      handleToggleModal();
+    } catch (e) {
+      setError("Something went wrong. Please try again!");
+    }
   };
 
   return (
@@ -92,6 +99,9 @@ const ApplyNowForm: FC = () => {
               buttonTitle={t("common.txt_apply_now")}
               htmlType="submit"
             />
+            <Text style={{ color: "var(--color-primary-orange)" }}>
+              {error}
+            </Text>
           </Form>
         );
       }}
