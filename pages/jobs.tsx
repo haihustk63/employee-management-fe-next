@@ -11,7 +11,7 @@ export const JobManagementContext = createContext({});
 export default function JobPage({ jobList, allPositions }: any) {
   const [currentJobList, setCurrentJobList] = useState(jobList);
 
-  const handleGetJobs = async (params: any) => {
+  const handleGetJobs = async (params: any = {}) => {
     const newResult = await jobService.getAllJobs(params);
     const newJobs = newResult?.data;
     setCurrentJobList(newJobs);

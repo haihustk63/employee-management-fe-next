@@ -28,71 +28,9 @@ const FormSearch: FC = () => {
   ) as any;
   const formRef = useRef() as any;
 
-  // const { handleChange, setFieldValue, values } = formRef?.current || {};
-
-  // const [isTitleChange, setIsTitleChange] = useState(false);
-
-  // const handleSetSearchParams = (field: string) => (value: any) => {
-  //   const params = { ...queryParams, [field]: value };
-  //   const pureParams = makeCleanObject(params);
-  //   setQueryParams(pureParams);
-  // };
-
-  // useEffect(() => {
-  //   if (isTitleChange) {
-  //     handleSetSearchParams("title")(values.title);
-  //     setIsTitleChange(false);
-  //   }
-  // }, [isTitleChange]);
-
-  // const handleSetTitleChange = () => {
-  //   setIsTitleChange(true);
-  // };
-
-  // const debounceSetTitleParams = useMemo(
-  //   () => debounce(handleSetTitleChange, 500),
-  //   []
-  // );
-
-  // useEffect(() => {
-  //   return () => {
-  //     debounceSetTitleParams.cancel();
-  //   };
-  // }, []);
-
-  // const handleChangeTitle = (e: any) => {
-  //   handleChange(e);
-  //   debounceSetTitleParams();
-  // };
-
-  // const handleChangeOtherValue = (field: string) => (value: string) => {
-  //   setFieldValue(field, value);
-  //   handleSetSearchParams(field)(value);
-  // };
-  // useEffect(() => {
-  //   if (searchParams.toString() && !isInit) {
-  //     const title = searchParams.get("title");
-  //     const typeOfJob = searchParams.get("typeOfJob");
-  //     const level = searchParams.get("level");
-  //     const positionId = searchParams.get("positionId");
-
-  //     formRef?.current?.setFieldValue("title", title);
-  //     if (typeOfJob !== undefined && typeOfJob !== null) {
-  //       formRef?.current?.setFieldValue("typeOfJob", Number(typeOfJob));
-  //     }
-  //     if (level !== undefined && level !== null) {
-  //       formRef?.current?.setFieldValue("level", Number(level));
-  //     }
-  //     if (positionId !== undefined && positionId !== null) {
-  //       formRef?.current?.setFieldValue("positionId", Number(positionId));
-  //     }
-
-  //     const params = { title, typeOfJob, level, positionId };
-  //     const pureParams = makeCleanObject(params);
-  //     setQueryParams(pureParams);
-  //   }
-  //   setIsInit(true);
-  // }, [searchParams, isInit]);
+  const clearFilter = () => {
+    formRef?.current.resetForm();
+  };
 
   return (
     <Formik
@@ -139,6 +77,7 @@ const FormSearch: FC = () => {
               placeholder="Position"
             />
             <AppButton buttonTitle={t("common.txt_search")} htmlType="submit" />
+            <AppButton buttonTitle="Clear" onClick={clearFilter} />
           </Form>
         );
       }}
